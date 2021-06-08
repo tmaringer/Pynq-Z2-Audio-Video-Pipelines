@@ -22,10 +22,10 @@ proc checkRequiredFiles { origin_dir} {
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_gain.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_rectification.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_saturation.vhd" \
-   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/flipflops.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_echo.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/buffers.vhd" \
+   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_receiver.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_transmitter.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/hdmi-overlay/hdmi-overlay.vhd" \
@@ -144,13 +144,13 @@ set_property -name "sim.central_dir" -value "$proj_dir/${_xil_proj_name_}.ip_use
 set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
 set_property -name "simulator_language" -value "VHDL" -objects $obj
 set_property -name "target_language" -value "VHDL" -objects $obj
-set_property -name "webtalk.activehdl_export_sim" -value "32" -objects $obj
-set_property -name "webtalk.ies_export_sim" -value "32" -objects $obj
-set_property -name "webtalk.modelsim_export_sim" -value "32" -objects $obj
-set_property -name "webtalk.questa_export_sim" -value "32" -objects $obj
-set_property -name "webtalk.riviera_export_sim" -value "32" -objects $obj
-set_property -name "webtalk.vcs_export_sim" -value "32" -objects $obj
-set_property -name "webtalk.xsim_export_sim" -value "32" -objects $obj
+set_property -name "webtalk.activehdl_export_sim" -value "33" -objects $obj
+set_property -name "webtalk.ies_export_sim" -value "33" -objects $obj
+set_property -name "webtalk.modelsim_export_sim" -value "33" -objects $obj
+set_property -name "webtalk.questa_export_sim" -value "33" -objects $obj
+set_property -name "webtalk.riviera_export_sim" -value "33" -objects $obj
+set_property -name "webtalk.vcs_export_sim" -value "33" -objects $obj
+set_property -name "webtalk.xsim_export_sim" -value "33" -objects $obj
 set_property -name "webtalk.xsim_launch_sim" -value "230" -objects $obj
 set_property -name "xpm_libraries" -value "XPM_CDC XPM_MEMORY" -objects $obj
 
@@ -175,10 +175,10 @@ set files [list \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_gain.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_rectification.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_saturation.vhd"] \
- [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/flipflops.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_echo.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/buffers.vhd"] \
+ [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_receiver.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_transmitter.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/hdmi-overlay/hdmi-overlay.vhd"] \
@@ -215,13 +215,6 @@ set_property -name "file_type" -value "VHDL" -objects $file_obj
 set_property -name "used_in" -value "synthesis" -objects $file_obj
 set_property -name "used_in_simulation" -value "0" -objects $file_obj
 
-set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd"
-set file [file normalize $file]
-set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
-set_property -name "file_type" -value "VHDL" -objects $file_obj
-set_property -name "used_in" -value "synthesis" -objects $file_obj
-set_property -name "used_in_simulation" -value "0" -objects $file_obj
-
 set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/flipflops.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
@@ -237,6 +230,13 @@ set_property -name "used_in" -value "synthesis" -objects $file_obj
 set_property -name "used_in_simulation" -value "0" -objects $file_obj
 
 set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/buffers.vhd"
+set file [file normalize $file]
+set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+set_property -name "file_type" -value "VHDL" -objects $file_obj
+set_property -name "used_in" -value "synthesis" -objects $file_obj
+set_property -name "used_in_simulation" -value "0" -objects $file_obj
+
+set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
@@ -385,9 +385,6 @@ if { [get_files axi_rectification.vhd] == "" } {
 if { [get_files axi_saturation.vhd] == "" } {
   import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_saturation.vhd
 }
-if { [get_files debounce.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd
-}
 if { [get_files flipflops.vhd] == "" } {
   import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/flipflops.vhd
 }
@@ -396,6 +393,9 @@ if { [get_files axi_echo.vhd] == "" } {
 }
 if { [get_files buffers.vhd] == "" } {
   import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/buffers.vhd
+}
+if { [get_files debounce.vhd] == "" } {
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd
 }
 if { [get_files i2s_receiver.vhd] == "" } {
   import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_receiver.vhd
@@ -412,7 +412,7 @@ if { [get_files hdmi-overlay.vhd] == "" } {
 proc cr_bd_design_1 { parentCell } {
 # The design that will be created by this Tcl proc contains the following 
 # module references:
-# Buffers, I2S_Receiver, I2S_Transmitter, pattern_generator, AXI_Echo, AXI_Fir, AXI_Gain, AXI_Rectification, AXI_Saturation, Debounce, FlipFlops
+# Buffers, Debounce, I2S_Receiver, I2S_Transmitter, pattern_generator, AXI_Echo, AXI_Fir, AXI_Gain, AXI_Rectification, AXI_Saturation, FlipFlops
 
 
 
@@ -466,6 +466,7 @@ proc cr_bd_design_1 { parentCell } {
   if { $bCheckModules == 1 } {
      set list_check_mods "\ 
   Buffers\
+  Debounce\
   I2S_Receiver\
   I2S_Transmitter\
   pattern_generator\
@@ -474,7 +475,6 @@ proc cr_bd_design_1 { parentCell } {
   AXI_Gain\
   AXI_Rectification\
   AXI_Saturation\
-  Debounce\
   FlipFlops\
   "
 
@@ -543,10 +543,10 @@ proc create_hier_cell_AXI_Effects { parentCell nameHier } {
 
 
   # Create pins
-  create_bd_pin -dir I btn1
-  create_bd_pin -dir I btn2
-  create_bd_pin -dir I btn3
-  create_bd_pin -dir I btn4
+  create_bd_pin -dir I in1
+  create_bd_pin -dir I in2
+  create_bd_pin -dir I in3
+  create_bd_pin -dir I in4
   create_bd_pin -dir O led1
   create_bd_pin -dir O led2
   create_bd_pin -dir O led3
@@ -555,14 +555,11 @@ proc create_hier_cell_AXI_Effects { parentCell nameHier } {
   create_bd_pin -dir O led4_r
   create_bd_pin -dir O led5_b
   create_bd_pin -dir O led5_r
-  create_bd_pin -dir O led_g1_0
-  create_bd_pin -dir O led_g2_0
   create_bd_pin -dir O -from 23 -to 0 m_axis1_tdata
   create_bd_pin -dir I -type clk s_axi_aclk1
   create_bd_pin -dir I -type rst s_axi_aresetn1
   create_bd_pin -dir O src_send
   create_bd_pin -dir I sw
-  create_bd_pin -dir I switch_0
 
   # Create instance: AXI_Echo_0, and set properties
   set block_name AXI_Echo
@@ -623,17 +620,6 @@ proc create_hier_cell_AXI_Effects { parentCell nameHier } {
      return 1
    }
   
-  # Create instance: Debounce_0, and set properties
-  set block_name Debounce
-  set block_cell_name Debounce_0
-  if { [catch {set Debounce_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $Debounce_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: FlipFlops_0, and set properties
   set block_name FlipFlops
   set block_cell_name FlipFlops_0
@@ -667,8 +653,6 @@ proc create_hier_cell_AXI_Effects { parentCell nameHier } {
 
   # Create port connections
   connect_bd_net -net AXI_Echo_0_led_enable [get_bd_pins led4] [get_bd_pins AXI_Echo_0/led_enable]
-  connect_bd_net -net AXI_Echo_0_led_g1 [get_bd_pins led_g1_0] [get_bd_pins AXI_Echo_0/led_g1]
-  connect_bd_net -net AXI_Echo_0_led_g2 [get_bd_pins led_g2_0] [get_bd_pins AXI_Echo_0/led_g2]
   connect_bd_net -net AXI_Echo_0_m_axis1_tdata [get_bd_pins m_axis1_tdata] [get_bd_pins AXI_Echo_0/m_axis1_tdata]
   connect_bd_net -net AXI_Echo_0_src_send [get_bd_pins src_send] [get_bd_pins AXI_Echo_0/src_send]
   connect_bd_net -net AXI_Fir_0_led_enable [get_bd_pins led3] [get_bd_pins AXI_Fir_0/led_enable]
@@ -678,34 +662,29 @@ proc create_hier_cell_AXI_Effects { parentCell nameHier } {
   connect_bd_net -net AXI_Saturation_0_led_enable [get_bd_pins led1] [get_bd_pins AXI_Saturation_0/led_enable]
   connect_bd_net -net AXI_Saturation_0_led_top_l [get_bd_pins led5_r] [get_bd_pins AXI_Saturation_0/led_top_l]
   connect_bd_net -net AXI_Saturation_0_led_top_r [get_bd_pins led4_r] [get_bd_pins AXI_Saturation_0/led_top_r]
-  connect_bd_net -net Debounce_0_result1 [get_bd_pins Debounce_0/result1] [get_bd_pins FlipFlops_0/in1]
-  connect_bd_net -net Debounce_0_result2 [get_bd_pins Debounce_0/result2] [get_bd_pins FlipFlops_0/in2]
-  connect_bd_net -net Debounce_0_result3 [get_bd_pins Debounce_0/result3] [get_bd_pins FlipFlops_0/in3]
-  connect_bd_net -net Debounce_0_result4 [get_bd_pins Debounce_0/result4] [get_bd_pins FlipFlops_0/in4]
   connect_bd_net -net FlipFlops_0_out1 [get_bd_pins AXI_Saturation_0/enable] [get_bd_pins FlipFlops_0/out1]
   connect_bd_net -net FlipFlops_0_out2 [get_bd_pins AXI_Rectification_0/enable] [get_bd_pins FlipFlops_0/out2]
   connect_bd_net -net FlipFlops_0_out3 [get_bd_pins AXI_Fir_0/enable] [get_bd_pins FlipFlops_0/out3]
   connect_bd_net -net FlipFlops_0_out4 [get_bd_pins AXI_Echo_0/enable] [get_bd_pins FlipFlops_0/out4]
-  connect_bd_net -net btn1_1 [get_bd_pins btn1] [get_bd_pins Debounce_0/button1]
-  connect_bd_net -net btn2_1 [get_bd_pins btn2] [get_bd_pins Debounce_0/button2]
-  connect_bd_net -net btn3_1 [get_bd_pins btn3] [get_bd_pins Debounce_0/button3]
-  connect_bd_net -net btn4_1 [get_bd_pins btn4] [get_bd_pins Debounce_0/button4]
-  connect_bd_net -net s_axi_aclk1_1 [get_bd_pins s_axi_aclk1] [get_bd_pins AXI_Echo_0/clk] [get_bd_pins AXI_Fir_0/clk] [get_bd_pins AXI_Gain_0/clk] [get_bd_pins AXI_Rectification_0/clk] [get_bd_pins AXI_Saturation_0/clk] [get_bd_pins Debounce_0/clk] [get_bd_pins FlipFlops_0/clk] [get_bd_pins axi_apb_bridge_0/s_axi_aclk]
-  connect_bd_net -net s_axi_aresetn1_1 [get_bd_pins s_axi_aresetn1] [get_bd_pins AXI_Echo_0/rst] [get_bd_pins AXI_Fir_0/rst] [get_bd_pins AXI_Gain_0/rst] [get_bd_pins AXI_Rectification_0/rst] [get_bd_pins AXI_Saturation_0/rst] [get_bd_pins Debounce_0/rst] [get_bd_pins FlipFlops_0/rst] [get_bd_pins axi_apb_bridge_0/s_axi_aresetn]
+  connect_bd_net -net in1_1 [get_bd_pins in1] [get_bd_pins FlipFlops_0/in1]
+  connect_bd_net -net in2_1 [get_bd_pins in2] [get_bd_pins FlipFlops_0/in2]
+  connect_bd_net -net in3_1 [get_bd_pins in3] [get_bd_pins FlipFlops_0/in3]
+  connect_bd_net -net in4_1 [get_bd_pins in4] [get_bd_pins FlipFlops_0/in4]
+  connect_bd_net -net s_axi_aclk1_1 [get_bd_pins s_axi_aclk1] [get_bd_pins AXI_Echo_0/clk] [get_bd_pins AXI_Fir_0/clk] [get_bd_pins AXI_Gain_0/clk] [get_bd_pins AXI_Rectification_0/clk] [get_bd_pins AXI_Saturation_0/clk] [get_bd_pins FlipFlops_0/clk] [get_bd_pins axi_apb_bridge_0/s_axi_aclk]
+  connect_bd_net -net s_axi_aresetn1_1 [get_bd_pins s_axi_aresetn1] [get_bd_pins AXI_Echo_0/rst] [get_bd_pins AXI_Fir_0/rst] [get_bd_pins AXI_Gain_0/rst] [get_bd_pins AXI_Rectification_0/rst] [get_bd_pins AXI_Saturation_0/rst] [get_bd_pins FlipFlops_0/rst] [get_bd_pins axi_apb_bridge_0/s_axi_aresetn]
   connect_bd_net -net sw_1 [get_bd_pins sw] [get_bd_pins AXI_Rectification_0/switch]
-  connect_bd_net -net switch_0_1 [get_bd_pins switch_0] [get_bd_pins AXI_Echo_0/switch]
 
   # Restore current instance
   current_bd_instance $oldCurInst
 }
   
-# Hierarchical cell: crossing_clock_domain_50_hdmi
-proc create_hier_cell_crossing_clock_domain_50_hdmi { parentCell nameHier } {
+# Hierarchical cell: crossing_clock_domain_audio_hdmi
+proc create_hier_cell_crossing_clock_domain_audio_hdmi { parentCell nameHier } {
 
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_crossing_clock_domain_50_hdmi() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_crossing_clock_domain_audio_hdmi() - Empty argument(s)!"}
      return
   }
 
@@ -876,6 +855,7 @@ proc create_hier_cell_clock_domain_hdmi { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.kClkRange {3} \
    CONFIG.kDebug {false} \
+   CONFIG.kEdidFileName {dgl_720p_cea.data} \
    CONFIG.kEnableSerialClkOutput {false} \
  ] $dvi2rgb_0
 
@@ -889,7 +869,11 @@ proc create_hier_cell_clock_domain_hdmi { parentCell nameHier } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.frame_height {720} \
+   CONFIG.frame_width {1280} \
+ ] $pattern_generator_0
+
   # Create instance: rgb2dvi_0, and set properties
   set rgb2dvi_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2dvi:1.4 rgb2dvi_0 ]
   set_property -dict [ list \
@@ -938,13 +922,13 @@ proc create_hier_cell_clock_domain_hdmi { parentCell nameHier } {
   current_bd_instance $oldCurInst
 }
   
-# Hierarchical cell: clock_domain_50
-proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
+# Hierarchical cell: clock_domain_audio
+proc create_hier_cell_clock_domain_audio { parentCell nameHier } {
 
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_clock_domain_50() - Empty argument(s)!"}
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_clock_domain_audio() - Empty argument(s)!"}
      return
   }
 
@@ -994,10 +978,8 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
   create_bd_pin -dir O led3
   create_bd_pin -dir O led4
   create_bd_pin -dir O led4_b
-  create_bd_pin -dir O led4_g
   create_bd_pin -dir O led4_r
   create_bd_pin -dir O led5_b
-  create_bd_pin -dir O led5_g
   create_bd_pin -dir O led5_r
   create_bd_pin -dir O out1
   create_bd_pin -dir O out2
@@ -1006,7 +988,6 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
   create_bd_pin -dir I -type clk s_axi_aclk1
   create_bd_pin -dir O src_send
   create_bd_pin -dir I sw
-  create_bd_pin -dir I sw1
   create_bd_pin -dir O test_adc
   create_bd_pin -dir O test_bclk
   create_bd_pin -dir O test_dac
@@ -1022,6 +1003,17 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $Buffers eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: Debounce_0, and set properties
+  set block_name Debounce
+  set block_cell_name Debounce_0
+  if { [catch {set Debounce_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Debounce_0 eq "" } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -1083,8 +1075,6 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
   connect_bd_net -net AXI_Effects_led2 [get_bd_pins led2] [get_bd_pins out2] [get_bd_pins AXI_Effects/led2]
   connect_bd_net -net AXI_Effects_led3 [get_bd_pins led3] [get_bd_pins out3] [get_bd_pins AXI_Effects/led3]
   connect_bd_net -net AXI_Effects_led4 [get_bd_pins led4] [get_bd_pins out4] [get_bd_pins AXI_Effects/led4]
-  connect_bd_net -net AXI_Effects_led_g1_0 [get_bd_pins led4_g] [get_bd_pins AXI_Effects/led_g1_0]
-  connect_bd_net -net AXI_Effects_led_g2_0 [get_bd_pins led5_g] [get_bd_pins AXI_Effects/led_g2_0]
   connect_bd_net -net AXI_Effects_m_axis1_tdata [get_bd_pins audiodata] [get_bd_pins AXI_Effects/m_axis1_tdata]
   connect_bd_net -net AXI_Effects_src_send [get_bd_pins src_send] [get_bd_pins AXI_Effects/src_send]
   connect_bd_net -net AXI_Saturation_0_led_bot [get_bd_pins led5_r] [get_bd_pins AXI_Effects/led5_r]
@@ -1098,16 +1088,19 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
   connect_bd_net -net Buffers_0_out5 [get_bd_pins test_dac] [get_bd_pins Buffers/out5]
   connect_bd_net -net I2S_Transmitter_1_sdata [get_bd_pins Buffers/in4] [get_bd_pins I2S_Transmitter/sdata]
   connect_bd_net -net bclk_0_1 [get_bd_pins au_bclk] [get_bd_pins Buffers/in1] [get_bd_pins I2S_Receiver/bclk] [get_bd_pins I2S_Transmitter/bclk]
-  connect_bd_net -net btn1_1 [get_bd_pins btn1] [get_bd_pins AXI_Effects/btn1]
-  connect_bd_net -net btn2_1 [get_bd_pins btn2] [get_bd_pins AXI_Effects/btn2]
-  connect_bd_net -net btn3_1 [get_bd_pins btn3] [get_bd_pins AXI_Effects/btn3]
-  connect_bd_net -net btn4_1 [get_bd_pins btn4] [get_bd_pins AXI_Effects/btn4]
+  connect_bd_net -net btn1_1 [get_bd_pins btn1] [get_bd_pins Debounce_0/button1]
+  connect_bd_net -net btn2_1 [get_bd_pins btn2] [get_bd_pins Debounce_0/button2]
+  connect_bd_net -net btn3_1 [get_bd_pins btn3] [get_bd_pins Debounce_0/button3]
+  connect_bd_net -net btn4_1 [get_bd_pins btn4] [get_bd_pins Debounce_0/button4]
+  connect_bd_net -net in1_1 [get_bd_pins AXI_Effects/in1] [get_bd_pins Debounce_0/result1]
+  connect_bd_net -net in2_1 [get_bd_pins AXI_Effects/in2] [get_bd_pins Debounce_0/result2]
+  connect_bd_net -net in3_1 [get_bd_pins AXI_Effects/in3] [get_bd_pins Debounce_0/result3]
+  connect_bd_net -net in4_1 [get_bd_pins AXI_Effects/in4] [get_bd_pins Debounce_0/result4]
   connect_bd_net -net lrclk_0_1 [get_bd_pins au_lrclk] [get_bd_pins Buffers/in2] [get_bd_pins I2S_Receiver/lrclk] [get_bd_pins I2S_Transmitter/lrclk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins s_axi_aclk1] [get_bd_pins AXI_Effects/s_axi_aclk1] [get_bd_pins I2S_Receiver/m_axis_aclk] [get_bd_pins I2S_Transmitter/s_axis_aclk] [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins s_axi_aclk1] [get_bd_pins AXI_Effects/s_axi_aclk1] [get_bd_pins Debounce_0/clk] [get_bd_pins I2S_Receiver/m_axis_aclk] [get_bd_pins I2S_Transmitter/s_axis_aclk] [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins ext_reset_in] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins AXI_Effects/s_axi_aresetn1] [get_bd_pins I2S_Receiver/m_axis_aresetn] [get_bd_pins I2S_Transmitter/s_axis_aresetn] [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins AXI_Effects/s_axi_aresetn1] [get_bd_pins Debounce_0/rst] [get_bd_pins I2S_Receiver/m_axis_aresetn] [get_bd_pins I2S_Transmitter/s_axis_aresetn] [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
   connect_bd_net -net sdata_0_1 [get_bd_pins au_adc] [get_bd_pins Buffers/in3] [get_bd_pins I2S_Receiver/sdata]
-  connect_bd_net -net sw1_1 [get_bd_pins sw1] [get_bd_pins AXI_Effects/switch_0]
   connect_bd_net -net switch_0_1 [get_bd_pins sw] [get_bd_pins AXI_Effects/sw]
 
   # Restore current instance
@@ -1179,26 +1172,23 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
   set led3 [ create_bd_port -dir O led3 ]
   set led4 [ create_bd_port -dir O led4 ]
   set led4_b [ create_bd_port -dir O led4_b ]
-  set led4_g [ create_bd_port -dir O led4_g ]
   set led4_r [ create_bd_port -dir O led4_r ]
   set led5_b [ create_bd_port -dir O led5_b ]
-  set led5_g [ create_bd_port -dir O led5_g ]
   set led5_r [ create_bd_port -dir O led5_r ]
   set sw [ create_bd_port -dir I sw ]
-  set sw1 [ create_bd_port -dir I sw1 ]
   set test_adc [ create_bd_port -dir O test_adc ]
   set test_bclk [ create_bd_port -dir O test_bclk ]
   set test_dac [ create_bd_port -dir O test_dac ]
   set test_lrclk [ create_bd_port -dir O test_lrclk ]
 
-  # Create instance: clock_domain_50
-  create_hier_cell_clock_domain_50 [current_bd_instance .] clock_domain_50
+  # Create instance: clock_domain_audio
+  create_hier_cell_clock_domain_audio [current_bd_instance .] clock_domain_audio
 
   # Create instance: clock_domain_hdmi
   create_hier_cell_clock_domain_hdmi [current_bd_instance .] clock_domain_hdmi
 
-  # Create instance: crossing_clock_domain_50_hdmi
-  create_hier_cell_crossing_clock_domain_50_hdmi [current_bd_instance .] crossing_clock_domain_50_hdmi
+  # Create instance: crossing_clock_domain_audio_hdmi
+  create_hier_cell_crossing_clock_domain_audio_hdmi [current_bd_instance .] crossing_clock_domain_audio_hdmi
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -2027,43 +2017,41 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
  ] $processing_system7_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_iic_0_IIC [get_bd_intf_ports iic_rtl] [get_bd_intf_pins clock_domain_50/iic_rtl]
+  connect_bd_intf_net -intf_net axi_iic_0_IIC [get_bd_intf_ports iic_rtl] [get_bd_intf_pins clock_domain_audio/iic_rtl]
   connect_bd_intf_net -intf_net clock_domain_hdmi_DDC_1 [get_bd_intf_ports DDC_0] [get_bd_intf_pins clock_domain_hdmi/DDC_1]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
-  connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins clock_domain_50/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
+  connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins clock_domain_audio/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
 
   # Create port connections
-  connect_bd_net -net AXI_Effects_led1 [get_bd_ports led1] [get_bd_pins clock_domain_50/led1]
-  connect_bd_net -net AXI_Effects_led2 [get_bd_ports led2] [get_bd_pins clock_domain_50/led2]
-  connect_bd_net -net AXI_Effects_led3 [get_bd_ports led3] [get_bd_pins clock_domain_50/led3]
-  connect_bd_net -net AXI_Effects_led4 [get_bd_ports led4] [get_bd_pins clock_domain_50/led4]
-  connect_bd_net -net AXI_Effects_led_g1_0 [get_bd_ports led4_g] [get_bd_pins clock_domain_50/led4_g]
-  connect_bd_net -net AXI_Effects_led_g2_0 [get_bd_ports led5_g] [get_bd_pins clock_domain_50/led5_g]
-  connect_bd_net -net AXI_Effects_m_axis1_tdata [get_bd_pins clock_domain_50/audiodata] [get_bd_pins crossing_clock_domain_50_hdmi/src_in]
-  connect_bd_net -net AXI_Saturation_0_led_bot [get_bd_ports led5_r] [get_bd_pins clock_domain_50/led5_r]
-  connect_bd_net -net AXI_Saturation_0_led_bot_l [get_bd_ports led5_b] [get_bd_pins clock_domain_50/led5_b]
-  connect_bd_net -net AXI_Saturation_0_led_bot_r [get_bd_ports led4_b] [get_bd_pins clock_domain_50/led4_b]
-  connect_bd_net -net AXI_Saturation_0_led_top_r [get_bd_ports led4_r] [get_bd_pins clock_domain_50/led4_r]
-  connect_bd_net -net Buffers_0_out1 [get_bd_ports test_bclk] [get_bd_pins clock_domain_50/test_bclk]
-  connect_bd_net -net Buffers_0_out2 [get_bd_ports test_lrclk] [get_bd_pins clock_domain_50/test_lrclk]
-  connect_bd_net -net Buffers_0_out3 [get_bd_ports test_adc] [get_bd_pins clock_domain_50/test_adc]
-  connect_bd_net -net Buffers_0_out4 [get_bd_ports au_dac] [get_bd_pins clock_domain_50/au_dac]
-  connect_bd_net -net Buffers_0_out5 [get_bd_ports test_dac] [get_bd_pins clock_domain_50/test_dac]
-  connect_bd_net -net bclk_0_1 [get_bd_ports au_bclk] [get_bd_pins clock_domain_50/au_bclk]
-  connect_bd_net -net btn1_1 [get_bd_ports btn1] [get_bd_pins clock_domain_50/btn1]
-  connect_bd_net -net btn2_1 [get_bd_ports btn2] [get_bd_pins clock_domain_50/btn2]
-  connect_bd_net -net btn3_1 [get_bd_ports btn3] [get_bd_pins clock_domain_50/btn3]
-  connect_bd_net -net btn4_1 [get_bd_ports btn4] [get_bd_pins clock_domain_50/btn4]
+  connect_bd_net -net AXI_Effects_led1 [get_bd_ports led1] [get_bd_pins clock_domain_audio/led1]
+  connect_bd_net -net AXI_Effects_led2 [get_bd_ports led2] [get_bd_pins clock_domain_audio/led2]
+  connect_bd_net -net AXI_Effects_led3 [get_bd_ports led3] [get_bd_pins clock_domain_audio/led3]
+  connect_bd_net -net AXI_Effects_led4 [get_bd_ports led4] [get_bd_pins clock_domain_audio/led4]
+  connect_bd_net -net AXI_Effects_m_axis1_tdata [get_bd_pins clock_domain_audio/audiodata] [get_bd_pins crossing_clock_domain_audio_hdmi/src_in]
+  connect_bd_net -net AXI_Saturation_0_led_bot [get_bd_ports led5_r] [get_bd_pins clock_domain_audio/led5_r]
+  connect_bd_net -net AXI_Saturation_0_led_bot_l [get_bd_ports led5_b] [get_bd_pins clock_domain_audio/led5_b]
+  connect_bd_net -net AXI_Saturation_0_led_bot_r [get_bd_ports led4_b] [get_bd_pins clock_domain_audio/led4_b]
+  connect_bd_net -net AXI_Saturation_0_led_top_r [get_bd_ports led4_r] [get_bd_pins clock_domain_audio/led4_r]
+  connect_bd_net -net Buffers_0_out1 [get_bd_ports test_bclk] [get_bd_pins clock_domain_audio/test_bclk]
+  connect_bd_net -net Buffers_0_out2 [get_bd_ports test_lrclk] [get_bd_pins clock_domain_audio/test_lrclk]
+  connect_bd_net -net Buffers_0_out3 [get_bd_ports test_adc] [get_bd_pins clock_domain_audio/test_adc]
+  connect_bd_net -net Buffers_0_out4 [get_bd_ports au_dac] [get_bd_pins clock_domain_audio/au_dac]
+  connect_bd_net -net Buffers_0_out5 [get_bd_ports test_dac] [get_bd_pins clock_domain_audio/test_dac]
+  connect_bd_net -net bclk_0_1 [get_bd_ports au_bclk] [get_bd_pins clock_domain_audio/au_bclk]
+  connect_bd_net -net btn1_1 [get_bd_ports btn1] [get_bd_pins clock_domain_audio/btn1]
+  connect_bd_net -net btn2_1 [get_bd_ports btn2] [get_bd_pins clock_domain_audio/btn2]
+  connect_bd_net -net btn3_1 [get_bd_ports btn3] [get_bd_pins clock_domain_audio/btn3]
+  connect_bd_net -net btn4_1 [get_bd_ports btn4] [get_bd_pins clock_domain_audio/btn4]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins clock_domain_hdmi/clk_in1_0]
-  connect_bd_net -net clock_domain_50_out1 [get_bd_pins clock_domain_50/out1] [get_bd_pins crossing_clock_domain_50_hdmi/In0]
-  connect_bd_net -net clock_domain_50_out2 [get_bd_pins clock_domain_50/out2] [get_bd_pins crossing_clock_domain_50_hdmi/In1]
-  connect_bd_net -net clock_domain_50_out3 [get_bd_pins clock_domain_50/out3] [get_bd_pins crossing_clock_domain_50_hdmi/In2]
-  connect_bd_net -net clock_domain_50_out4 [get_bd_pins clock_domain_50/out4] [get_bd_pins crossing_clock_domain_50_hdmi/In3]
-  connect_bd_net -net clock_domain_50_src_send [get_bd_pins clock_domain_50/src_send] [get_bd_pins crossing_clock_domain_50_hdmi/src_send]
+  connect_bd_net -net clock_domain_50_out1 [get_bd_pins clock_domain_audio/out1] [get_bd_pins crossing_clock_domain_audio_hdmi/In0]
+  connect_bd_net -net clock_domain_50_out2 [get_bd_pins clock_domain_audio/out2] [get_bd_pins crossing_clock_domain_audio_hdmi/In1]
+  connect_bd_net -net clock_domain_50_out3 [get_bd_pins clock_domain_audio/out3] [get_bd_pins crossing_clock_domain_audio_hdmi/In2]
+  connect_bd_net -net clock_domain_50_out4 [get_bd_pins clock_domain_audio/out4] [get_bd_pins crossing_clock_domain_audio_hdmi/In3]
+  connect_bd_net -net clock_domain_50_src_send [get_bd_pins clock_domain_audio/src_send] [get_bd_pins crossing_clock_domain_audio_hdmi/src_send]
   connect_bd_net -net clock_domain_hdmi_dout_0 [get_bd_ports hdmi_rx_hpd] [get_bd_ports hdmi_tx_hpdn] [get_bd_pins clock_domain_hdmi/dout_0]
-  connect_bd_net -net crossing_clock_domain_50_hdmi_dest_out1 [get_bd_pins clock_domain_hdmi/soundinput] [get_bd_pins crossing_clock_domain_50_hdmi/dest_out1]
-  connect_bd_net -net dest_clk_1 [get_bd_pins clock_domain_hdmi/pixel_clk] [get_bd_pins crossing_clock_domain_50_hdmi/dest_clk]
+  connect_bd_net -net crossing_clock_domain_50_hdmi_dest_out1 [get_bd_pins clock_domain_hdmi/soundinput] [get_bd_pins crossing_clock_domain_audio_hdmi/dest_out1]
+  connect_bd_net -net dest_clk_1 [get_bd_pins clock_domain_hdmi/pixel_clk] [get_bd_pins crossing_clock_domain_audio_hdmi/dest_clk]
   connect_bd_net -net hdmi_out_0_clk_n [get_bd_ports hdmi_tx_clk_n] [get_bd_pins clock_domain_hdmi/clk_n]
   connect_bd_net -net hdmi_out_0_clk_p [get_bd_ports hdmi_tx_clk_p] [get_bd_pins clock_domain_hdmi/clk_p]
   connect_bd_net -net hdmi_out_0_data_n [get_bd_ports hdmi_tx_data_n] [get_bd_pins clock_domain_hdmi/data_n]
@@ -2072,322 +2060,28 @@ proc create_hier_cell_clock_domain_50 { parentCell nameHier } {
   connect_bd_net -net hdmi_rx_clk_p_1 [get_bd_ports hdmi_rx_clk_p] [get_bd_pins clock_domain_hdmi/hdmi_rx_clk_p]
   connect_bd_net -net hdmi_rx_d_n_1 [get_bd_ports hdmi_rx_data_n] [get_bd_pins clock_domain_hdmi/hdmi_rx_d_n]
   connect_bd_net -net hdmi_rx_d_p_1 [get_bd_ports hdmi_rx_data_p] [get_bd_pins clock_domain_hdmi/hdmi_rx_d_p]
-  connect_bd_net -net lrclk_0_1 [get_bd_ports au_lrclk] [get_bd_pins clock_domain_50/au_lrclk]
+  connect_bd_net -net lrclk_0_1 [get_bd_ports au_lrclk] [get_bd_pins clock_domain_audio/au_lrclk]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports au_mclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins clock_domain_50/s_axi_aclk1] [get_bd_pins crossing_clock_domain_50_hdmi/src_clk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clock_domain_50/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
-  connect_bd_net -net sdata_0_1 [get_bd_ports au_adc] [get_bd_pins clock_domain_50/au_adc]
-  connect_bd_net -net sw1_1 [get_bd_ports sw1] [get_bd_pins clock_domain_50/sw1]
-  connect_bd_net -net switch_0_1 [get_bd_ports sw] [get_bd_pins clock_domain_50/sw]
-  connect_bd_net -net xpm_cdc_gen_0_dest_out [get_bd_pins clock_domain_hdmi/sw] [get_bd_pins crossing_clock_domain_50_hdmi/dest_out]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins clock_domain_audio/s_axi_aclk1] [get_bd_pins crossing_clock_domain_audio_hdmi/src_clk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clock_domain_audio/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
+  connect_bd_net -net sdata_0_1 [get_bd_ports au_adc] [get_bd_pins clock_domain_audio/au_adc]
+  connect_bd_net -net switch_0_1 [get_bd_ports sw] [get_bd_pins clock_domain_audio/sw]
+  connect_bd_net -net xpm_cdc_gen_0_dest_out [get_bd_pins clock_domain_hdmi/sw] [get_bd_pins crossing_clock_domain_audio_hdmi/dest_out]
 
   # Create address segments
-  assign_bd_address -offset 0x43C30000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_50/AXI_Effects/AXI_Echo_0/s_apb/Reg] -force
-  assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_50/AXI_Effects/AXI_Fir_0/s_apb/Reg] -force
-  assign_bd_address -offset 0x43C10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_50/AXI_Effects/AXI_Gain_0/s_apb/Reg] -force
-  assign_bd_address -offset 0x43C20000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_50/AXI_Effects/AXI_Saturation_0/s_apb/Reg] -force
-  assign_bd_address -offset 0x43C40000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_50/AXI_Effects/FlipFlops_0/s_apb/Reg] -force
-  assign_bd_address -offset 0x41600000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_50/axi_iic_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x43C30000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/AXI_Effects/AXI_Echo_0/s_apb/Reg] -force
+  assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/AXI_Effects/AXI_Fir_0/s_apb/Reg] -force
+  assign_bd_address -offset 0x43C10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/AXI_Effects/AXI_Gain_0/s_apb/Reg] -force
+  assign_bd_address -offset 0x43C20000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/AXI_Effects/AXI_Saturation_0/s_apb/Reg] -force
+  assign_bd_address -offset 0x43C40000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/AXI_Effects/FlipFlops_0/s_apb/Reg] -force
+  assign_bd_address -offset 0x41600000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/axi_iic_0/S_AXI/Reg] -force
 
-  # Perform GUI Layout
-  regenerate_bd_layout -layout_string {
-   "ActiveEmotionalView":"Default View",
-   "Color Coded_ExpandedHierarchyInLayout":"",
-   "Color Coded_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
-#  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1420 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1420 -y 80 -defaultsOSRD
-preplace port iic_rtl -pg 1 -lvl 5 -x 1420 -y 380 -defaultsOSRD
-preplace port au_mclk -pg 1 -lvl 5 -x 1420 -y 140 -defaultsOSRD
-preplace port au_bclk -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
-preplace port au_lrclk -pg 1 -lvl 0 -x 0 -y 660 -defaultsOSRD
-preplace port au_adc -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
-preplace port au_dac -pg 1 -lvl 5 -x 1420 -y 1150 -defaultsOSRD
-preplace port test_bclk -pg 1 -lvl 5 -x 1420 -y 1090 -defaultsOSRD
-preplace port test_lrclk -pg 1 -lvl 5 -x 1420 -y 1110 -defaultsOSRD
-preplace port test_adc -pg 1 -lvl 5 -x 1420 -y 1130 -defaultsOSRD
-preplace port test_dac -pg 1 -lvl 5 -x 1420 -y 1170 -defaultsOSRD
-preplace port led1 -pg 1 -lvl 5 -x 1420 -y 690 -defaultsOSRD
-preplace port btn1 -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
-preplace port btn2 -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
-preplace port btn3 -pg 1 -lvl 0 -x 0 -y 740 -defaultsOSRD
-preplace port btn4 -pg 1 -lvl 0 -x 0 -y 800 -defaultsOSRD
-preplace port led3 -pg 1 -lvl 5 -x 1420 -y 670 -defaultsOSRD
-preplace port led4 -pg 1 -lvl 5 -x 1420 -y 790 -defaultsOSRD
-preplace port led2 -pg 1 -lvl 5 -x 1420 -y 650 -defaultsOSRD
-preplace port sw -pg 1 -lvl 0 -x 0 -y 720 -defaultsOSRD
-preplace port led5_b -pg 1 -lvl 5 -x 1420 -y 730 -defaultsOSRD
-preplace port led5_r -pg 1 -lvl 5 -x 1420 -y 710 -defaultsOSRD
-preplace port led4_r -pg 1 -lvl 5 -x 1420 -y 750 -defaultsOSRD
-preplace port led4_b -pg 1 -lvl 5 -x 1420 -y 770 -defaultsOSRD
-preplace port sw1 -pg 1 -lvl 0 -x 0 -y 820 -defaultsOSRD
-preplace port led4_g -pg 1 -lvl 5 -x 1420 -y 810 -defaultsOSRD
-preplace port led5_g -pg 1 -lvl 5 -x 1420 -y 830 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 3 -x 940 -y 120 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 3 -x 940 -y 400 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 560 -y 390 -defaultsOSRD
-preplace inst i2s_transmitter_0 -pg 1 -lvl 4 -x 1280 -y 930 -swap {0 1 2 3 4 8 9 7 5 6} -defaultsOSRD
-preplace inst InOutTranslation_0 -pg 1 -lvl 4 -x 1280 -y 1130 -swap {1 2 3 0 4 5 6 7 8} -defaultsOSRD
-preplace inst i2s_receiver_0 -pg 1 -lvl 2 -x 560 -y 640 -swap {0 1 2 3 4 7 8 9 5 6} -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 200 -y 350 -defaultsOSRD
-preplace inst AXI_Effects -pg 1 -lvl 3 -x 940 -y 730 -defaultsOSRD
-preplace netloc bclk_0_1 1 0 4 NJ 640 410 940 NJ 940 1150
-preplace netloc lrclk_0_1 1 0 4 NJ 660 390 950 NJ 950 1140
-preplace netloc sdata_0_1 1 0 4 NJ 680 370 1160 NJ 1160 NJ
-preplace netloc InOutTranslation_0_out1 1 4 1 NJ 1090
-preplace netloc InOutTranslation_0_out2 1 4 1 NJ 1110
-preplace netloc InOutTranslation_0_out3 1 4 1 NJ 1130
-preplace netloc i2s_transmitter_0_sdata 1 3 2 1160 1030 1400
-preplace netloc InOutTranslation_0_out4 1 4 1 NJ 1150
-preplace netloc InOutTranslation_0_out5 1 4 1 NJ 1170
-preplace netloc processing_system7_0_FCLK_CLK0 1 3 2 NJ 140 NJ
-preplace netloc AXI_Saturation_0_led_enable 1 3 2 NJ 690 NJ
-preplace netloc AXI_Rectification_0_led_enable 1 3 2 NJ 650 NJ
-preplace netloc switch_0_1 1 0 3 NJ 720 400J 740 710J
-preplace netloc AXI_Saturation_0_led_bot 1 3 2 NJ 710 NJ
-preplace netloc AXI_Saturation_0_led_bot_l 1 3 2 NJ 730 NJ
-preplace netloc AXI_Saturation_0_led_top_r 1 3 2 NJ 750 NJ
-preplace netloc AXI_Saturation_0_led_bot_r 1 3 2 NJ 770 NJ
-preplace netloc AXI_Echo_0_led_enable 1 3 2 NJ 670 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 20 250 NJ 250 NJ 250 1140
-preplace netloc ARESETN_1 1 1 1 370 350n
-preplace netloc processing_system7_0_FCLK_CLK1 1 0 4 30 450 410 530 720 480 1160
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 3 370 540 730 930 NJ
-preplace netloc AXI_Effects_led4 1 3 2 NJ 790 NJ
-preplace netloc btn3_1 1 0 3 NJ 740 380J 750 740J
-preplace netloc btn2_1 1 0 3 NJ 760 NJ 760 NJ
-preplace netloc btn1_1 1 0 3 NJ 780 NJ 780 NJ
-preplace netloc btn4_1 1 0 3 NJ 800 NJ 800 NJ
-preplace netloc switch_0_2 1 0 3 NJ 820 NJ 820 NJ
-preplace netloc AXI_Effects_led_g1_0 1 3 2 NJ 810 NJ
-preplace netloc AXI_Effects_led_g2_0 1 3 2 NJ 830 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 380
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 410 240 NJ 240 1150
-preplace netloc processing_system7_0_FIXED_IO 1 3 2 NJ 80 NJ
-preplace netloc i2s_receiver_0_m_axis 1 2 1 N 640
-preplace netloc AXI_Echo_0_m_axis 1 3 1 1150 630n
-preplace netloc axi_iic_0_IIC 1 3 2 NJ 380 NJ
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 710 400n
-preplace netloc processing_system7_0_DDR 1 3 2 NJ 60 NJ
-levelinfo -pg 1 0 200 560 940 1280 1420
-pagesize -pg 1 -db -bbox -sgen -100 0 1540 1230
-",
-   "Color Coded_ScaleFactor":"0.408943",
-   "Color Coded_TopLeft":"-746,0",
-   "Default View_ScaleFactor":"0.569565",
-   "Default View_TopLeft":"1598,0",
-   "Display-PortTypeClock":"true",
-   "Display-PortTypeOthers":"true",
-   "Display-PortTypeReset":"true",
-   "ExpandedHierarchyInLayout":"",
-   "Interfaces View_Layers":"/processing_system7_0_FCLK_CLK1:false|/processing_system7_0_FCLK_RESET0_N:false|/rst_ps7_0_100M_peripheral_aresetn:false|/processing_system7_0_FCLK_CLK0:false|",
-   "Interfaces View_ScaleFactor":"1.0",
-   "Interfaces View_TopLeft":"-138,-54",
-   "No Loops_ExpandedHierarchyInLayout":"",
-   "No Loops_Layers":"/processing_system7_0_FCLK_CLK1:true|/processing_system7_0_FCLK_RESET0_N:true|/rst_ps7_0_100M_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|",
-   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
-#  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 9 -x 2990 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 9 -x 2990 -y 80 -defaultsOSRD
-preplace port iic_rtl -pg 1 -lvl 9 -x 2990 -y 220 -defaultsOSRD
-preplace port au_mclk -pg 1 -lvl 9 -x 2990 -y 120 -defaultsOSRD
-preplace port au_bclk -pg 1 -lvl 0 -x 0 -y 1020 -defaultsOSRD
-preplace port au_lrclk -pg 1 -lvl 0 -x 0 -y 1040 -defaultsOSRD
-preplace port au_adc -pg 1 -lvl 0 -x 0 -y 1060 -defaultsOSRD
-preplace port au_dac -pg 1 -lvl 9 -x 2990 -y 920 -defaultsOSRD
-preplace port test_bclk -pg 1 -lvl 9 -x 2990 -y 860 -defaultsOSRD
-preplace port test_lrclk -pg 1 -lvl 9 -x 2990 -y 880 -defaultsOSRD
-preplace port test_adc -pg 1 -lvl 9 -x 2990 -y 900 -defaultsOSRD
-preplace port test_dac -pg 1 -lvl 9 -x 2990 -y 940 -defaultsOSRD
-preplace port led1 -pg 1 -lvl 9 -x 2990 -y 480 -defaultsOSRD
-preplace port btn1 -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
-preplace port btn2 -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
-preplace port btn3 -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
-preplace port btn4 -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
-preplace port led3 -pg 1 -lvl 9 -x 2990 -y 420 -defaultsOSRD
-preplace port led4 -pg 1 -lvl 9 -x 2990 -y 720 -defaultsOSRD
-preplace port led2 -pg 1 -lvl 9 -x 2990 -y 440 -defaultsOSRD
-preplace port sw -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
-preplace port led5_b -pg 1 -lvl 9 -x 2990 -y 1040 -defaultsOSRD
-preplace port led5_r -pg 1 -lvl 9 -x 2990 -y 1020 -defaultsOSRD
-preplace port led4_r -pg 1 -lvl 9 -x 2990 -y 1060 -defaultsOSRD
-preplace port led4_b -pg 1 -lvl 9 -x 2990 -y 460 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 8 -x 2780 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 68 67 69 66} -defaultsOSRD -pinDir DDR right -pinY DDR 0R -pinDir FIXED_IO right -pinY FIXED_IO 20R -pinDir USBIND_0 right -pinY USBIND_0 40R -pinDir M_AXI_GP0 left -pinY M_AXI_GP0 0L -pinDir M_AXI_GP0_ACLK left -pinY M_AXI_GP0_ACLK 40L -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 60R -pinDir FCLK_CLK1 left -pinY FCLK_CLK1 60L -pinDir FCLK_RESET0_N left -pinY FCLK_RESET0_N 20L
-preplace inst axi_iic_0 -pg 1 -lvl 8 -x 2780 -y 220 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 0L -pinDir IIC right -pinY IIC 0R -pinDir s_axi_aclk left -pinY s_axi_aclk 20L -pinDir s_axi_aresetn left -pinY s_axi_aresetn 100L -pinDir iic2intc_irpt right -pinY iic2intc_irpt 20R -pinBusDir gpo right -pinBusY gpo 40R
-preplace inst ps7_0_axi_periph -pg 1 -lvl 7 -x 2400 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 78 75 79 76 80 77 81} -defaultsOSRD -pinDir S00_AXI right -pinY S00_AXI 0R -pinDir M00_AXI right -pinY M00_AXI 20R -pinDir M01_AXI left -pinY M01_AXI 0L -pinDir ACLK left -pinY ACLK 20L -pinDir ARESETN left -pinY ARESETN 100L -pinDir S00_ACLK left -pinY S00_ACLK 40L -pinDir S00_ARESETN left -pinY S00_ARESETN 120L -pinDir M00_ACLK left -pinY M00_ACLK 60L -pinDir M00_ARESETN left -pinY M00_ARESETN 140L -pinDir M01_ACLK left -pinY M01_ACLK 80L -pinDir M01_ARESETN left -pinY M01_ARESETN 160L
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 460 -swap {1 0 2 3 4 5 6 7 8 9} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 0R -pinDir aux_reset_in left -pinY aux_reset_in 0L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 20L -pinDir dcm_locked left -pinY dcm_locked 40L -pinDir mb_reset right -pinY mb_reset 40R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 60R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 80R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 100R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 120R
-preplace inst i2s_transmitter_0 -pg 1 -lvl 7 -x 2400 -y 780 -swap {0 1 2 3 4 8 9 7 5 6} -defaultsOSRD -pinDir s_axis left -pinY s_axis 0L -pinDir bclk left -pinY bclk 60L -pinDir lrclk left -pinY lrclk 80L -pinDir sdata right -pinY sdata 80R -pinDir s_axis_aclk left -pinY s_axis_aclk 20L -pinDir s_axis_aresetn left -pinY s_axis_aresetn 40L
-preplace inst InOutTranslation_0 -pg 1 -lvl 8 -x 2780 -y 860 -swap {1 2 3 0 4 5 6 7 8} -defaultsOSRD -pinDir in1 left -pinY in1 60L -pinDir in2 left -pinY in2 80L -pinDir in3 left -pinY in3 100L -pinDir in4 left -pinY in4 0L -pinDir out1 right -pinY out1 0R -pinDir out2 right -pinY out2 20R -pinDir out3 right -pinY out3 40R -pinDir out4 right -pinY out4 60R -pinDir out5 right -pinY out5 80R
-preplace inst i2s_receiver_0 -pg 1 -lvl 4 -x 1190 -y 740 -swap {0 1 2 3 4 8 9 7 5 6} -defaultsOSRD -pinDir m_axis right -pinY m_axis 0R -pinDir bclk left -pinY bclk 300L -pinDir lrclk left -pinY lrclk 320L -pinDir sdata left -pinY sdata 280L -pinDir m_axis_aclk left -pinY m_axis_aclk 0L -pinDir m_axis_aresetn left -pinY m_axis_aresetn 20L
-preplace inst debounce_0 -pg 1 -lvl 2 -x 520 -y 340 -swap {4 5 0 1 2 3 6 7 8 9} -defaultsOSRD -pinDir clk left -pinY clk 140L -pinDir reset_n left -pinY reset_n 160L -pinDir button1 left -pinY button1 0L -pinDir button2 left -pinY button2 20L -pinDir button3 left -pinY button3 40L -pinDir button4 left -pinY button4 60L -pinDir result1 right -pinY result1 100R -pinDir result2 right -pinY result2 120R -pinDir result3 right -pinY result3 140R -pinDir result4 right -pinY result4 160R
-preplace inst system_ila_0 -pg 1 -lvl 7 -x 2400 -y 540 -swap {15 1 2 3 4 20 6 7 8 9 10 11 12 13 14 5 16 17 18 19 0 21 22 23 24 25 26} -defaultsOSRD -pinDir SLOT_0_AXIS left -pinY SLOT_0_AXIS 60L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 80L -pinDir SLOT_2_AXIS left -pinY SLOT_2_AXIS 40L -pinDir SLOT_3_AXIS left -pinY SLOT_3_AXIS 20L -pinDir SLOT_4_AXIS left -pinY SLOT_4_AXIS 0L -pinDir clk left -pinY clk 100L -pinDir resetn left -pinY resetn 120L
-preplace inst AXI_Gain_0 -pg 1 -lvl 5 -x 1590 -y 740 -defaultsOSRD -pinDir s_axis left -pinY s_axis 0L -pinDir m_axis right -pinY m_axis 0R -pinDir S_APB_GP0 left -pinY S_APB_GP0 20L -pinDir clk left -pinY clk 40L -pinDir rst left -pinY rst 60L
-preplace inst AXI_Rectification_0 -pg 1 -lvl 5 -x 1590 -y 480 -swap {5 1 2 3 4 0 6 7 8 9 13 14 12 11 10} -defaultsOSRD -pinDir s_axis right -pinY s_axis 40R -pinDir m_axis right -pinY m_axis 0R -pinDir clk left -pinY clk 40L -pinDir rst left -pinY rst 60L -pinDir led_enable right -pinY led_enable 60R -pinDir switch left -pinY switch 20L -pinDir enable left -pinY enable 0L
-preplace inst Activation_0 -pg 1 -lvl 4 -x 1190 -y 440 -swap {0 1 2 3 4 5 6 7 8 15 17 9 18 10 12 11 14 13 16} -defaultsOSRD -pinDir S_APB_GP0 left -pinY S_APB_GP0 0L -pinDir aclk left -pinY aclk 120L -pinDir aresetn left -pinY aresetn 140L -pinDir IN1 left -pinY IN1 20L -pinDir OUT1 right -pinY OUT1 140R -pinDir IN2 left -pinY IN2 40L -pinDir OUT2 right -pinY OUT2 40R -pinDir IN3 left -pinY IN3 60L -pinDir OUT3 right -pinY OUT3 100R -pinDir IN4 left -pinY IN4 80L -pinDir OUT4 right -pinY OUT4 120R
-preplace inst axi_apb_bridge_0 -pg 1 -lvl 3 -x 860 -y 130 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 44 18 19 20 21 22 23 24 25 17 27 28 29 30 31 32 33 34 26 36 37 38 39 40 41 42 43 35 45 46 47 48 49 50 51 52 53 54} -defaultsOSRD -pinDir AXI4_LITE right -pinY AXI4_LITE 0R -pinDir APB_M right -pinY APB_M 80R -pinDir APB_M2 right -pinY APB_M2 20R -pinDir APB_M3 right -pinY APB_M3 40R -pinDir APB_M4 right -pinY APB_M4 60R -pinDir s_axi_aclk left -pinY s_axi_aclk 0L -pinDir s_axi_aresetn left -pinY s_axi_aresetn 20L
-preplace inst AXI_Saturation_0 -pg 1 -lvl 6 -x 1970 -y 740 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 22 23 24 25 21 26} -defaultsOSRD -pinDir s_axis left -pinY s_axis 0L -pinDir m_axis right -pinY m_axis 0R -pinDir S_APB_GP0 left -pinY S_APB_GP0 20L -pinDir clk left -pinY clk 40L -pinDir rst left -pinY rst 60L -pinDir led_enable right -pinY led_enable 40R -pinDir led_top_l right -pinY led_top_l 280R -pinDir led_bot_l right -pinY led_bot_l 300R -pinDir led_top_r right -pinY led_top_r 320R -pinDir led_bot_r right -pinY led_bot_r 20R -pinDir enable left -pinY enable 100L
-preplace inst AXI_Echo_0 -pg 1 -lvl 6 -x 1970 -y 300 -swap {10 1 2 3 4 5 6 7 8 9 0 11 12 13 14 15 16 17 18 20 22 21 19} -defaultsOSRD -pinDir s_axis left -pinY s_axis 20L -pinDir m_axis right -pinY m_axis 40R -pinDir S_APB_GP0 left -pinY S_APB_GP0 0L -pinDir clk left -pinY clk 140L -pinDir rst left -pinY rst 160L -pinDir led_enable right -pinY led_enable 120R -pinDir enable left -pinY enable 120L
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 7 380 280 NJ 280 N 280 NJ 280 1730J 240 2250J 280 2570J
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 7 400 580 690 680 1050 680 1450 680 1810 660 2230 320 NJ
-preplace netloc bclk_0_1 1 0 8 NJ 1020 NJ 1020 710 1140 1010 1140 NJ 1140 NJ 1140 2170 920 NJ
-preplace netloc lrclk_0_1 1 0 8 NJ 1040 NJ 1040 630 1160 1050 1160 NJ 1160 NJ 1160 2230 940 NJ
-preplace netloc sdata_0_1 1 0 8 NJ 1060 NJ 1060 670 1120 990 1120 NJ 1120 NJ 1120 NJ 1120 2570J
-preplace netloc InOutTranslation_0_out1 1 8 1 NJ 860
-preplace netloc InOutTranslation_0_out2 1 8 1 NJ 880
-preplace netloc InOutTranslation_0_out3 1 8 1 NJ 900
-preplace netloc i2s_transmitter_0_sdata 1 7 1 N 860
-preplace netloc InOutTranslation_0_out4 1 8 1 NJ 920
-preplace netloc InOutTranslation_0_out5 1 8 1 NJ 940
-preplace netloc button1_0_1 1 0 2 NJ 340 NJ
-preplace netloc button2_0_1 1 0 2 NJ 360 NJ
-preplace netloc button3_0_1 1 0 2 NJ 380 NJ
-preplace netloc button4_0_1 1 0 2 NJ 400 NJ
-preplace netloc debounce_0_result1 1 2 2 730 460 N
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 7 380 560 670 660 1010 660 1430 660 1790 640 2210 300 2590
-preplace netloc processing_system7_0_FCLK_CLK0 1 8 1 NJ 120
-preplace netloc Activation_0_OUT1 1 4 2 1330 860 1770J
-preplace netloc AXI_Saturation_0_led_enable 1 6 3 2130J 480 NJ 480 NJ
-preplace netloc AXI_Rectification_0_led_enable 1 5 4 NJ 540 2150J 440 NJ 440 NJ
-preplace netloc switch_0_1 1 0 5 NJ 640 NJ 640 NJ 640 N 640 1350J
-preplace netloc AXI_Saturation_0_led_bot 1 6 3 NJ 1020 NJ 1020 NJ
-preplace netloc debounce_0_result2 1 2 2 710 480 N
-preplace netloc debounce_0_result3 1 2 2 650 500 N
-preplace netloc debounce_0_result4 1 2 2 630 520 N
-preplace netloc Activation_0_OUT2 1 4 1 N 480
-preplace netloc Activation_0_OUT4 1 4 5 1370J 640 1730J 680 2150J 720 NJ 720 NJ
-preplace netloc AXI_Saturation_0_led_bot_l 1 6 3 NJ 1040 NJ 1040 NJ
-preplace netloc AXI_Saturation_0_led_top_r 1 6 3 NJ 1060 NJ 1060 NJ
-preplace netloc AXI_Saturation_0_led_bot_r 1 6 3 2190J 460 NJ 460 NJ
-preplace netloc Activation_0_OUT3 1 4 2 1410 600 1730J
-preplace netloc AXI_Echo_0_led_enable 1 6 3 NJ 420 NJ 420 NJ
-preplace netloc AXI_Echo_0_m_axis 1 6 1 2170 340n
-preplace netloc AXI_Rectification_0_m_axis 1 5 2 1830 560 N
-preplace netloc processing_system7_0_DDR 1 8 1 NJ 60
-preplace netloc processing_system7_0_M_AXI_GP0 1 7 1 N 60
-preplace netloc ps7_0_axi_periph_M00_AXI 1 7 1 2550 80n
-preplace netloc processing_system7_0_FIXED_IO 1 8 1 NJ 80
-preplace netloc axi_iic_0_IIC 1 8 1 NJ 220
-preplace netloc AXI_Gain_0_m_axis 1 5 2 1830 620 NJ
-preplace netloc i2s_receiver_0_m_axis 1 4 3 1410 620 1770J 600 NJ
-preplace netloc AXI_Saturation_0_m_axis 1 5 2 NJ 520 2110
-preplace netloc axi_apb_bridge_0_APB_M 1 3 1 1010 210n
-preplace netloc axi_apb_bridge_0_APB_M4 1 3 2 1050J 170 1390
-preplace netloc axi_apb_bridge_0_APB_M3 1 3 3 1030J 150 NJ 150 1750
-preplace netloc axi_apb_bridge_0_APB_M2 1 3 3 1010J 130 NJ 130 1830
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 4 990J 0 NJ 0 NJ 0 2250J
-levelinfo -pg 1 0 200 520 860 1190 1590 1970 2400 2780 2990
-pagesize -pg 1 -db -bbox -sgen -110 -20 3110 1170
-",
-   "No Loops_ScaleFactor":"0.435043",
-   "No Loops_TopLeft":"-103,2",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
-#  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 3110 -y 240 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 3110 -y 260 -defaultsOSRD
-preplace port iic_rtl -pg 1 -lvl 3 -x 3110 -y 400 -defaultsOSRD
-preplace port DDC_0 -pg 1 -lvl 3 -x 3110 -y 60 -defaultsOSRD
-preplace port au_adc -pg 1 -lvl 0 -x -100 -y 480 -defaultsOSRD
-preplace port au_bclk -pg 1 -lvl 0 -x -100 -y 440 -defaultsOSRD
-preplace port au_dac -pg 1 -lvl 3 -x 3110 -y 480 -defaultsOSRD
-preplace port au_lrclk -pg 1 -lvl 0 -x -100 -y 460 -defaultsOSRD
-preplace port au_mclk -pg 1 -lvl 3 -x 3110 -y 320 -defaultsOSRD
-preplace port btn1 -pg 1 -lvl 0 -x -100 -y 690 -defaultsOSRD
-preplace port btn2 -pg 1 -lvl 0 -x -100 -y 710 -defaultsOSRD
-preplace port btn3 -pg 1 -lvl 0 -x -100 -y 730 -defaultsOSRD
-preplace port btn4 -pg 1 -lvl 0 -x -100 -y 750 -defaultsOSRD
-preplace port led1 -pg 1 -lvl 3 -x 3110 -y 520 -defaultsOSRD
-preplace port led2 -pg 1 -lvl 3 -x 3110 -y 540 -defaultsOSRD
-preplace port led3 -pg 1 -lvl 3 -x 3110 -y 560 -defaultsOSRD
-preplace port led4 -pg 1 -lvl 3 -x 3110 -y 580 -defaultsOSRD
-preplace port led4_b -pg 1 -lvl 3 -x 3110 -y 600 -defaultsOSRD
-preplace port led4_g -pg 1 -lvl 3 -x 3110 -y 680 -defaultsOSRD
-preplace port led4_r -pg 1 -lvl 3 -x 3110 -y 620 -defaultsOSRD
-preplace port led5_b -pg 1 -lvl 3 -x 3110 -y 640 -defaultsOSRD
-preplace port led5_g -pg 1 -lvl 3 -x 3110 -y 700 -defaultsOSRD
-preplace port led5_r -pg 1 -lvl 3 -x 3110 -y 660 -defaultsOSRD
-preplace port sw -pg 1 -lvl 0 -x -100 -y 770 -defaultsOSRD
-preplace port sw1 -pg 1 -lvl 0 -x -100 -y 790 -defaultsOSRD
-preplace port test_adc -pg 1 -lvl 3 -x 3110 -y 460 -defaultsOSRD
-preplace port test_bclk -pg 1 -lvl 3 -x 3110 -y 420 -defaultsOSRD
-preplace port test_dac -pg 1 -lvl 3 -x 3110 -y 500 -defaultsOSRD
-preplace port test_lrclk -pg 1 -lvl 3 -x 3110 -y 440 -defaultsOSRD
-preplace port hdmi_tx_clk_p -pg 1 -lvl 3 -x 3110 -y 80 -defaultsOSRD
-preplace port hdmi_tx_clk_n -pg 1 -lvl 3 -x 3110 -y 100 -defaultsOSRD
-preplace port hdmi_rx_clk_p -pg 1 -lvl 0 -x -100 -y 120 -defaultsOSRD
-preplace port hdmi_rx_clk_n -pg 1 -lvl 0 -x -100 -y 100 -defaultsOSRD
-preplace port clk -pg 1 -lvl 0 -x -100 -y 180 -defaultsOSRD
-preplace portBus hdmi_tx_data_p -pg 1 -lvl 3 -x 3110 -y 120 -defaultsOSRD
-preplace portBus hdmi_tx_data_n -pg 1 -lvl 3 -x 3110 -y 140 -defaultsOSRD
-preplace portBus hdmi_rx_data_p -pg 1 -lvl 0 -x -100 -y 160 -defaultsOSRD
-preplace portBus hdmi_rx_data_n -pg 1 -lvl 0 -x -100 -y 140 -defaultsOSRD
-preplace portBus hdmi_rx_hpd -pg 1 -lvl 3 -x 3110 -y 170 -defaultsOSRD
-preplace portBus hdmi_tx_hpdn -pg 1 -lvl 3 -x 3110 -y 190 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 300 -y 300 -defaultsOSRD
-preplace inst clock_domain_50 -pg 1 -lvl 2 -x 1330 -y 906 -defaultsOSRD
-preplace inst clock_domain_hdmi -pg 1 -lvl 2 -x 1330 -y 122 -defaultsOSRD
-preplace inst crossing_clock_domain_50_hdmi -pg 1 -lvl 1 -x 300 -y 602 -defaultsOSRD
-preplace netloc AXI_Effects_led_g1_0 1 2 1 1650J 680n
-preplace netloc AXI_Effects_led_g2_0 1 2 1 1660J 700n
-preplace netloc AXI_Saturation_0_led_bot 1 2 1 1640J 660n
-preplace netloc AXI_Saturation_0_led_bot_l 1 2 1 1630J 640n
-preplace netloc AXI_Saturation_0_led_bot_r 1 2 1 1610J 600n
-preplace netloc AXI_Saturation_0_led_top_r 1 2 1 1620J 620n
-preplace netloc Buffers_0_out1 1 2 1 1520J 420n
-preplace netloc Buffers_0_out2 1 2 1 1530J 440n
-preplace netloc Buffers_0_out3 1 2 1 1540J 460n
-preplace netloc Buffers_0_out4 1 2 1 1550J 480n
-preplace netloc Buffers_0_out5 1 2 1 1560J 500n
-preplace netloc bclk_0_1 1 0 2 -30J 422 590J
-preplace netloc btn2_1 1 0 2 -10J 442 550J
-preplace netloc btn3_1 1 0 2 10J 452 530J
-preplace netloc btn4_1 1 0 2 20J 462 510J
-preplace netloc lrclk_0_1 1 0 2 -40J 170 620J
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 690J 542 1490J
-preplace netloc processing_system7_0_FCLK_CLK1 1 0 2 100 180 600
-preplace netloc sdata_0_1 1 0 2 0J 472 560J
-preplace netloc switch_0_1 1 0 2 -10J 870 490J
-preplace netloc sw1_1 1 0 2 -60J 880 480J
-preplace netloc AXI_Effects_m_axis1_tdata 1 0 3 30 100 640J 592 1460
-preplace netloc hdmi_out_0_clk_p 1 2 1 1460J 80n
-preplace netloc hdmi_out_0_clk_n 1 2 1 1460J 100n
-preplace netloc hdmi_out_0_data_n 1 2 1 1460J 140n
-preplace netloc hdmi_out_0_data_p 1 2 1 1460J 120n
-preplace netloc AXI_Effects_led1 1 2 1 1570J 520n
-preplace netloc AXI_Effects_led2 1 2 1 1580J 540n
-preplace netloc AXI_Effects_led3 1 2 1 1590J 560n
-preplace netloc AXI_Effects_led4 1 2 1 1600J 580n
-preplace netloc clock_domain_50_out1 1 0 3 60 1516 NJ 1516 1470
-preplace netloc clock_domain_50_out4 1 0 3 90 130 490J 582 1480
-preplace netloc clock_domain_50_out2 1 0 3 70 1526 NJ 1526 1460
-preplace netloc clock_domain_50_out3 1 0 3 80 120 540J 572 1490
-preplace netloc xpm_cdc_gen_0_dest_out 1 1 1 630 62n
-preplace netloc btn1_1 1 0 2 -20J 432 570J
-preplace netloc crossing_clock_domain_50_hdmi_dest_out1 1 1 1 680 82n
-preplace netloc clock_domain_50_src_send 1 0 3 40 140 520J 562 1500
-preplace netloc hdmi_rx_clk_n_1 1 0 2 -70J 80 670J
-preplace netloc hdmi_rx_clk_p_1 1 0 2 -80J 70 620J
-preplace netloc hdmi_rx_d_n_1 1 0 2 -60J 90 660J
-preplace netloc hdmi_rx_d_p_1 1 0 2 NJ 160 710J
-preplace netloc dest_clk_1 1 0 3 50 150 500J 552 1460
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 580 360n
-preplace netloc clk_in1_0_1 1 0 2 -50J 110 650J
-preplace netloc clock_domain_hdmi_dout_0 1 2 1 1510 170n
-preplace netloc processing_system7_0_DDR 1 1 2 710J 522 1470J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 610 300n
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 700J 532 1480J
-preplace netloc clock_domain_hdmi_DDC_1 1 2 1 1460J 60n
-preplace netloc axi_iic_0_IIC 1 2 1 1510J 400n
-levelinfo -pg 1 -100 300 1330 3110
-pagesize -pg 1 -db -bbox -sgen -290 0 3300 1540
-"
-}
 
   # Restore current instance
   current_bd_instance $oldCurInst
 
+  validate_bd_design
   save_bd_design
-common::send_gid_msg -ssname BD::TCL -id 2050 -severity "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."
-
   close_bd_design $design_name 
 }
 # End of cr_bd_design_1()
@@ -2421,7 +2115,6 @@ if { $obj != "" } {
 
 }
 set obj [get_runs synth_1]
-set_property -name "needs_refresh" -value "1" -objects $obj
 set_property -name "auto_incremental_checkpoint.directory" -value "C:/home/thibaut/FPGA/Vivadoprojects/audio-project/audio-project.srcs/utils_1/imports/synth_1" -objects $obj
 set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
 
@@ -2636,7 +2329,6 @@ set_property -name "options.warn_on_violation" -value "1" -objects $obj
 
 }
 set obj [get_runs impl_1]
-set_property -name "needs_refresh" -value "1" -objects $obj
 set_property -name "auto_incremental_checkpoint.directory" -value "C:/home/thibaut/FPGA/Vivadoprojects/audio-project/audio-project.srcs/utils_1/imports/impl_1" -objects $obj
 set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
 set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
