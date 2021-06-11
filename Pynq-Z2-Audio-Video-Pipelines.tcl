@@ -26,17 +26,18 @@ proc checkRequiredFiles { origin_dir} {
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_echo.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/buffers.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd" \
-   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_receiver.vhd" \
+   "${origin_dir}/src/rtl/i2s audio/i2s_receiver.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_transmitter.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/hdmi-overlay/hdmi-overlay.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/cdc.vhd" \
    "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/constrs_1/imports/constr/PYNQ-Z2 v1.0.xdc" \
+   "${origin_dir}/src/sim/hdmi_overlay_tb.vhd" \
    "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/bus_cdc.vhd" \
-   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_i2s_receiver.vhd" \
-   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_fir.vhd" \
-   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_echo.vhd" \
-   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_flipflops.vhd" \
-   "${origin_dir}/C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_gain.vhd" \
+   "${origin_dir}/src/sim/i2s_receiver_tb.vhd" \
+   "${origin_dir}/src/sim/axi_echo_tb.vhd" \
+   "${origin_dir}/src/sim/axi_gain_tb.vhd" \
+   "${origin_dir}/src/sim/flipflops_tb.vhd" \
+   "${origin_dir}/src/sim/axi_fir_tb.vhd" \
   ]
   foreach ifile $files {
     if { ![file isfile $ifile] } {
@@ -151,7 +152,7 @@ set_property -name "webtalk.questa_export_sim" -value "33" -objects $obj
 set_property -name "webtalk.riviera_export_sim" -value "33" -objects $obj
 set_property -name "webtalk.vcs_export_sim" -value "33" -objects $obj
 set_property -name "webtalk.xsim_export_sim" -value "33" -objects $obj
-set_property -name "webtalk.xsim_launch_sim" -value "230" -objects $obj
+set_property -name "webtalk.xsim_launch_sim" -value "264" -objects $obj
 set_property -name "xpm_libraries" -value "XPM_CDC XPM_MEMORY" -objects $obj
 
 # Create 'sources_1' fileset (if not found)
@@ -179,7 +180,7 @@ set files [list \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/audio-effects/axi_echo.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/buffers.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd"] \
- [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_receiver.vhd"] \
+ [file normalize "${origin_dir}/src/rtl/i2s audio/i2s_receiver.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_transmitter.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/hdmi-overlay/hdmi-overlay.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/cdc.vhd"] \
@@ -243,7 +244,7 @@ set_property -name "file_type" -value "VHDL" -objects $file_obj
 set_property -name "used_in" -value "synthesis" -objects $file_obj
 set_property -name "used_in_simulation" -value "0" -objects $file_obj
 
-set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_receiver.vhd"
+set file "$origin_dir/src/rtl/i2s audio/i2s_receiver.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
@@ -301,53 +302,51 @@ if {[string equal [get_filesets -quiet sim_1] ""]} {
 # Set 'sim_1' fileset object
 set obj [get_filesets sim_1]
 set files [list \
+ [file normalize "${origin_dir}/src/sim/hdmi_overlay_tb.vhd"] \
  [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/bus_cdc.vhd"] \
- [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_i2s_receiver.vhd"] \
- [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_fir.vhd"] \
- [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_echo.vhd"] \
- [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_flipflops.vhd"] \
- [file normalize "${origin_dir}/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_gain.vhd"] \
+ [file normalize "${origin_dir}/src/sim/i2s_receiver_tb.vhd"] \
+ [file normalize "${origin_dir}/src/sim/axi_echo_tb.vhd"] \
+ [file normalize "${origin_dir}/src/sim/axi_gain_tb.vhd"] \
+ [file normalize "${origin_dir}/src/sim/flipflops_tb.vhd"] \
+ [file normalize "${origin_dir}/src/sim/axi_fir_tb.vhd"] \
 ]
 add_files -norecurse -fileset $obj $files
 
 # Set 'sim_1' fileset file properties for remote files
+set file "$origin_dir/src/sim/hdmi_overlay_tb.vhd"
+set file [file normalize $file]
+set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
+set_property -name "file_type" -value "VHDL" -objects $file_obj
+
 set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/bus_cdc.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_i2s_receiver.vhd"
+set file "$origin_dir/src/sim/i2s_receiver_tb.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
 
-set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_fir.vhd"
+set file "$origin_dir/src/sim/axi_echo_tb.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
-set_property -name "used_in" -value "simulation" -objects $file_obj
-set_property -name "used_in_synthesis" -value "0" -objects $file_obj
 
-set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_echo.vhd"
+set file "$origin_dir/src/sim/axi_gain_tb.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
-set_property -name "used_in" -value "simulation" -objects $file_obj
-set_property -name "used_in_synthesis" -value "0" -objects $file_obj
 
-set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_flipflops.vhd"
+set file "$origin_dir/src/sim/flipflops_tb.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
-set_property -name "used_in" -value "simulation" -objects $file_obj
-set_property -name "used_in_synthesis" -value "0" -objects $file_obj
 
-set file "$origin_dir/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sim_1/imports/sim/tb_axi_gain.vhd"
+set file "$origin_dir/src/sim/axi_fir_tb.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "file_type" -value "VHDL" -objects $file_obj
-set_property -name "used_in" -value "simulation" -objects $file_obj
-set_property -name "used_in_synthesis" -value "0" -objects $file_obj
 
 
 # Set 'sim_1' fileset file properties for local files
@@ -357,12 +356,12 @@ set_property -name "used_in_synthesis" -value "0" -objects $file_obj
 set obj [get_filesets sim_1]
 set_property -name "hbs.configure_design_for_hier_access" -value "1" -objects $obj
 set_property -name "nl.mode" -value "funcsim" -objects $obj
-set_property -name "source_set" -value "" -objects $obj
-set_property -name "top" -value "cdc_tb" -objects $obj
+set_property -name "top" -value "pattern_generator_tb" -objects $obj
 set_property -name "top_auto_set" -value "0" -objects $obj
+set_property -name "top_lib" -value "xil_defaultlib" -objects $obj
 set_property -name "xsim.elaborate.debug_level" -value "all" -objects $obj
 set_property -name "xsim.simulate.log_all_signals" -value "1" -objects $obj
-set_property -name "xsim.simulate.runtime" -value "310ns" -objects $obj
+set_property -name "xsim.simulate.runtime" -value "40ms" -objects $obj
 
 # Set 'utils_1' fileset object
 set obj [get_filesets utils_1]
@@ -398,7 +397,7 @@ if { [get_files debounce.vhd] == "" } {
   import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/misc/debounce.vhd
 }
 if { [get_files i2s_receiver.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_receiver.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/src/rtl/i2s audio/i2s_receiver.vhd
 }
 if { [get_files i2s_transmitter.vhd] == "" } {
   import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/Pynq-Z2-Audio-Video-Pipelines/vivado_project/Pynq-Z2-Audio-Video-Pipelines.srcs/sources_1/imports/rtl/i2s audio/i2s_transmitter.vhd
@@ -674,6 +673,79 @@ proc create_hier_cell_AXI_Effects { parentCell nameHier } {
   connect_bd_net -net s_axi_aresetn1_1 [get_bd_pins s_axi_aresetn1] [get_bd_pins AXI_Echo_0/rst] [get_bd_pins AXI_Fir_0/rst] [get_bd_pins AXI_Gain_0/rst] [get_bd_pins AXI_Rectification_0/rst] [get_bd_pins AXI_Saturation_0/rst] [get_bd_pins FlipFlops_0/rst] [get_bd_pins axi_apb_bridge_0/s_axi_aresetn]
   connect_bd_net -net sw_1 [get_bd_pins sw] [get_bd_pins AXI_Rectification_0/switch]
 
+  # Perform GUI Layout
+  regenerate_bd_layout -hierarchy [get_bd_cells /clock_domain_audio/AXI_Effects] -layout_string {
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.626429",
+   "Default View_TopLeft":"-144,-26",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port AXI4_LITE -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace port m_axis -pg 1 -lvl 5 -x 1300 -y 600 -defaultsOSRD
+preplace port s_axis -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port led1 -pg 1 -lvl 5 -x 1300 -y 130 -defaultsOSRD
+preplace port led2 -pg 1 -lvl 5 -x 1300 -y 320 -defaultsOSRD
+preplace port led3 -pg 1 -lvl 5 -x 1300 -y 730 -defaultsOSRD
+preplace port led4 -pg 1 -lvl 5 -x 1300 -y 620 -defaultsOSRD
+preplace port led4_b -pg 1 -lvl 5 -x 1300 -y 210 -defaultsOSRD
+preplace port led4_r -pg 1 -lvl 5 -x 1300 -y 190 -defaultsOSRD
+preplace port led5_b -pg 1 -lvl 5 -x 1300 -y 170 -defaultsOSRD
+preplace port led5_r -pg 1 -lvl 5 -x 1300 -y 150 -defaultsOSRD
+preplace port s_axi_aclk1 -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace port s_axi_aresetn1 -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace port sw -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port src_send -pg 1 -lvl 5 -x 1300 -y 660 -defaultsOSRD
+preplace port in3 -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port in4 -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port in2 -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port in1 -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace portBus m_axis1_tdata -pg 1 -lvl 5 -x 1300 -y 640 -defaultsOSRD
+preplace inst axi_apb_bridge_0 -pg 1 -lvl 1 -x 150 -y 470 -defaultsOSRD
+preplace inst AXI_Fir_0 -pg 1 -lvl 3 -x 750 -y 510 -defaultsOSRD
+preplace inst AXI_Gain_0 -pg 1 -lvl 2 -x 440 -y 400 -defaultsOSRD
+preplace inst AXI_Rectification_0 -pg 1 -lvl 4 -x 1130 -y 310 -defaultsOSRD
+preplace inst AXI_Saturation_0 -pg 1 -lvl 3 -x 750 -y 250 -defaultsOSRD
+preplace inst FlipFlops_0 -pg 1 -lvl 2 -x 440 -y 110 -defaultsOSRD
+preplace inst AXI_Echo_0 -pg 1 -lvl 4 -x 1130 -y 630 -defaultsOSRD
+preplace netloc AXI_Echo_0_led_enable 1 4 1 NJ 620
+preplace netloc AXI_Fir_0_led_enable 1 3 2 NJ 520 1280J
+preplace netloc AXI_Rectification_0_led_enable 1 4 1 NJ 320
+preplace netloc AXI_Saturation_0_led_bot_l 1 3 2 920J 170 NJ
+preplace netloc AXI_Saturation_0_led_bot_r 1 3 2 950J 210 NJ
+preplace netloc AXI_Saturation_0_led_enable 1 3 2 890J 130 NJ
+preplace netloc AXI_Saturation_0_led_top_l 1 3 2 910J 150 NJ
+preplace netloc AXI_Saturation_0_led_top_r 1 3 2 930J 190 NJ
+preplace netloc FlipFlops_0_out1 1 2 1 590 80n
+preplace netloc FlipFlops_0_out2 1 2 2 N 100 970J
+preplace netloc FlipFlops_0_out3 1 2 1 560 120n
+preplace netloc FlipFlops_0_out4 1 2 2 580J 130 880
+preplace netloc s_axi_aclk1_1 1 0 4 30 570 290 250 600 360 980
+preplace netloc s_axi_aresetn1_1 1 0 4 20 580 320 260 620 140 900
+preplace netloc sw_1 1 0 4 NJ 310 NJ 310 570J 120 960J
+preplace netloc AXI_Echo_0_m_axis1_tdata 1 4 1 NJ 640
+preplace netloc AXI_Echo_0_src_send 1 4 1 NJ 660
+preplace netloc in3_1 1 0 2 NJ 150 NJ
+preplace netloc in4_1 1 0 2 NJ 170 NJ
+preplace netloc in2_1 1 0 2 NJ 130 NJ
+preplace netloc in1_1 1 0 2 NJ 110 NJ
+preplace netloc s_axis_1 1 0 2 NJ 370 NJ
+preplace netloc AXI_Echo_0_m_axis 1 4 1 NJ 600
+preplace netloc AXI_Saturation_0_m_axis 1 3 1 940 200n
+preplace netloc axi_apb_bridge_0_APB_M5 1 1 1 270 50n
+preplace netloc AXI_Gain_0_m_axis 1 2 1 580 210n
+preplace netloc AXI4_LITE_1 1 0 1 NJ 450
+preplace netloc AXI_Rectification_0_m_axis 1 2 3 630 400 940J 410 1280
+preplace netloc axi_apb_bridge_0_APB_M3 1 1 3 310 490 610J 410 890J
+preplace netloc axi_apb_bridge_0_APB_M2 1 1 2 300 230 NJ
+preplace netloc AXI_Fir_0_m_axis 1 3 1 870 500n
+preplace netloc axi_apb_bridge_0_APB_M 1 1 1 310 390n
+preplace netloc axi_apb_bridge_0_APB_M4 1 1 2 280 500 630J
+levelinfo -pg 1 0 150 440 750 1130 1300
+pagesize -pg 1 -db -bbox -sgen -150 -10 1480 750
+"
+}
+
   # Restore current instance
   current_bd_instance $oldCurInst
 }
@@ -821,6 +893,7 @@ proc create_hier_cell_clock_domain_hdmi { parentCell nameHier } {
   create_bd_pin -dir O -type clk pixel_clk
   create_bd_pin -dir I -from 23 -to 0 soundinput
   create_bd_pin -dir I -from 3 -to 0 sw
+  create_bd_pin -dir I sw1
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
@@ -870,6 +943,7 @@ proc create_hier_cell_clock_domain_hdmi { parentCell nameHier } {
      return 1
    }
     set_property -dict [ list \
+   CONFIG.audio_size {600} \
    CONFIG.frame_height {720} \
    CONFIG.frame_width {1280} \
  ] $pattern_generator_0
@@ -914,6 +988,7 @@ proc create_hier_cell_clock_domain_hdmi { parentCell nameHier } {
   connect_bd_net -net rgb2dvi_0_TMDS_Data_n [get_bd_pins data_n] [get_bd_pins rgb2dvi_0/TMDS_Data_n]
   connect_bd_net -net rgb2dvi_0_TMDS_Data_p [get_bd_pins data_p] [get_bd_pins rgb2dvi_0/TMDS_Data_p]
   connect_bd_net -net soundinput_1 [get_bd_pins soundinput] [get_bd_pins pattern_generator_0/soundinput]
+  connect_bd_net -net sw1_1 [get_bd_pins sw1] [get_bd_pins pattern_generator_0/enable]
   connect_bd_net -net sw_1 [get_bd_pins sw] [get_bd_pins pattern_generator_0/sw]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins clk_wiz_0/reset] [get_bd_pins dvi2rgb_0/aRst] [get_bd_pins dvi2rgb_0/pRst] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins dout_0] [get_bd_pins xlconstant_1/dout]
@@ -1103,6 +1178,95 @@ proc create_hier_cell_clock_domain_audio { parentCell nameHier } {
   connect_bd_net -net sdata_0_1 [get_bd_pins au_adc] [get_bd_pins Buffers/in3] [get_bd_pins I2S_Receiver/sdata]
   connect_bd_net -net switch_0_1 [get_bd_pins sw] [get_bd_pins AXI_Effects/sw]
 
+  # Perform GUI Layout
+  regenerate_bd_layout -hierarchy [get_bd_cells /clock_domain_audio] -layout_string {
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.506941",
+   "Default View_TopLeft":"-126,-24",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port iic_rtl -pg 1 -lvl 6 -x 1670 -y 240 -defaultsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace port au_bclk -pg 1 -lvl 0 -x 0 -y 540 -defaultsOSRD
+preplace port au_lrclk -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port au_adc -pg 1 -lvl 0 -x 0 -y 580 -defaultsOSRD
+preplace port s_axi_aclk1 -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port ext_reset_in -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port test_bclk -pg 1 -lvl 6 -x 1670 -y 830 -defaultsOSRD
+preplace port test_lrclk -pg 1 -lvl 6 -x 1670 -y 850 -defaultsOSRD
+preplace port test_adc -pg 1 -lvl 6 -x 1670 -y 870 -defaultsOSRD
+preplace port au_dac -pg 1 -lvl 6 -x 1670 -y 890 -defaultsOSRD
+preplace port test_dac -pg 1 -lvl 6 -x 1670 -y 910 -defaultsOSRD
+preplace port led1 -pg 1 -lvl 6 -x 1670 -y 320 -defaultsOSRD
+preplace port led2 -pg 1 -lvl 6 -x 1670 -y 360 -defaultsOSRD
+preplace port led3 -pg 1 -lvl 6 -x 1670 -y 400 -defaultsOSRD
+preplace port led4 -pg 1 -lvl 6 -x 1670 -y 440 -defaultsOSRD
+preplace port led4_b -pg 1 -lvl 6 -x 1670 -y 480 -defaultsOSRD
+preplace port led4_r -pg 1 -lvl 6 -x 1670 -y 500 -defaultsOSRD
+preplace port led5_b -pg 1 -lvl 6 -x 1670 -y 520 -defaultsOSRD
+preplace port led5_r -pg 1 -lvl 6 -x 1670 -y 540 -defaultsOSRD
+preplace port sw -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port out1 -pg 1 -lvl 6 -x 1670 -y 340 -defaultsOSRD
+preplace port out2 -pg 1 -lvl 6 -x 1670 -y 380 -defaultsOSRD
+preplace port out3 -pg 1 -lvl 6 -x 1670 -y 420 -defaultsOSRD
+preplace port out4 -pg 1 -lvl 6 -x 1670 -y 460 -defaultsOSRD
+preplace port src_send -pg 1 -lvl 6 -x 1670 -y 580 -defaultsOSRD
+preplace port btn2 -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port btn4 -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
+preplace port btn3 -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace port btn1 -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
+preplace portBus audiodata -pg 1 -lvl 6 -x 1670 -y 560 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 4 -x 1160 -y 260 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 190 -y 90 -defaultsOSRD
+preplace inst AXI_Effects -pg 1 -lvl 4 -x 1160 -y 480 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 780 -y 270 -defaultsOSRD
+preplace inst Buffers -pg 1 -lvl 5 -x 1510 -y 870 -defaultsOSRD
+preplace inst Debounce_0 -pg 1 -lvl 2 -x 480 -y 430 -defaultsOSRD
+preplace inst I2S_Receiver -pg 1 -lvl 3 -x 780 -y 580 -defaultsOSRD
+preplace inst I2S_Transmitter -pg 1 -lvl 5 -x 1510 -y 670 -defaultsOSRD
+preplace netloc I2S_Transmitter_1_sdata 1 4 2 1390 570 1630
+preplace netloc bclk_0_1 1 0 5 NJ 540 NJ 540 590 480 930J 630 1310
+preplace netloc lrclk_0_1 1 0 5 NJ 560 NJ 560 610 680 NJ 680 1380
+preplace netloc sdata_0_1 1 0 5 NJ 580 NJ 580 590 880 NJ 880 NJ
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 5 20 230 360 230 600 120 1010 170 1370J
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 4 370 130 620 130 1000 180 1350J
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 1 NJ 70
+preplace netloc Buffers_0_out1 1 5 1 NJ 830
+preplace netloc Buffers_0_out2 1 5 1 NJ 850
+preplace netloc Buffers_0_out3 1 5 1 NJ 870
+preplace netloc Buffers_0_out4 1 5 1 NJ 890
+preplace netloc Buffers_0_out5 1 5 1 NJ 910
+preplace netloc AXI_Effects_led1 1 4 2 1310J 340 1650J
+preplace netloc AXI_Effects_led2 1 4 2 1330J 380 1650J
+preplace netloc AXI_Effects_led3 1 4 2 1340J 420 1650J
+preplace netloc AXI_Effects_led4 1 4 2 NJ 460 1650J
+preplace netloc AXI_Saturation_0_led_bot_r 1 4 2 NJ 480 NJ
+preplace netloc AXI_Saturation_0_led_top_r 1 4 2 NJ 500 NJ
+preplace netloc AXI_Saturation_0_led_bot_l 1 4 2 NJ 520 NJ
+preplace netloc AXI_Saturation_0_led_bot 1 4 2 NJ 540 NJ
+preplace netloc switch_0_1 1 0 4 NJ 300 NJ 300 610J 470 950J
+preplace netloc AXI_Effects_m_axis1_tdata 1 4 2 1360J 550 1650J
+preplace netloc AXI_Effects_src_send 1 4 2 1380J 560 1640J
+preplace netloc btn2_1 1 0 2 NJ 440 NJ
+preplace netloc btn4_1 1 0 2 NJ 480 NJ
+preplace netloc btn3_1 1 0 2 NJ 460 NJ
+preplace netloc btn1_1 1 0 2 NJ 420 NJ
+preplace netloc in1_1 1 2 2 590J 410 970
+preplace netloc in2_1 1 2 2 NJ 420 960
+preplace netloc in3_1 1 2 2 NJ 440 980
+preplace netloc in4_1 1 2 2 NJ 460 940
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 960 280n
+preplace netloc AXI_Effects_m_axis 1 4 1 1320 380n
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 NJ 190 NJ 190 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 960 240n
+preplace netloc I2S_Receiver_0_m_axis 1 3 1 990 420n
+preplace netloc axi_iic_0_IIC 1 4 2 NJ 240 NJ
+levelinfo -pg 1 0 190 480 780 1160 1510 1670
+pagesize -pg 1 -db -bbox -sgen -130 -10 1820 970
+"
+}
+
   # Restore current instance
   current_bd_instance $oldCurInst
 }
@@ -1176,6 +1340,7 @@ proc create_hier_cell_clock_domain_audio { parentCell nameHier } {
   set led5_b [ create_bd_port -dir O led5_b ]
   set led5_r [ create_bd_port -dir O led5_r ]
   set sw [ create_bd_port -dir I sw ]
+  set sw1 [ create_bd_port -dir I sw1 ]
   set test_adc [ create_bd_port -dir O test_adc ]
   set test_bclk [ create_bd_port -dir O test_bclk ]
   set test_dac [ create_bd_port -dir O test_dac ]
@@ -2065,6 +2230,7 @@ proc create_hier_cell_clock_domain_audio { parentCell nameHier } {
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins clock_domain_audio/s_axi_aclk1] [get_bd_pins crossing_clock_domain_audio_hdmi/src_clk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clock_domain_audio/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
   connect_bd_net -net sdata_0_1 [get_bd_ports au_adc] [get_bd_pins clock_domain_audio/au_adc]
+  connect_bd_net -net sw1_1 [get_bd_ports sw1] [get_bd_pins clock_domain_hdmi/sw1]
   connect_bd_net -net switch_0_1 [get_bd_ports sw] [get_bd_pins clock_domain_audio/sw]
   connect_bd_net -net xpm_cdc_gen_0_dest_out [get_bd_pins clock_domain_hdmi/sw] [get_bd_pins crossing_clock_domain_audio_hdmi/dest_out]
 
@@ -2076,6 +2242,294 @@ proc create_hier_cell_clock_domain_audio { parentCell nameHier } {
   assign_bd_address -offset 0x43C40000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/AXI_Effects/FlipFlops_0/s_apb/Reg] -force
   assign_bd_address -offset 0x41600000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clock_domain_audio/axi_iic_0/S_AXI/Reg] -force
 
+  # Perform GUI Layout
+  regenerate_bd_layout -layout_string {
+   "ActiveEmotionalView":"Default View",
+   "Color Coded_ExpandedHierarchyInLayout":"",
+   "Color Coded_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1420 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1420 -y 80 -defaultsOSRD
+preplace port iic_rtl -pg 1 -lvl 5 -x 1420 -y 380 -defaultsOSRD
+preplace port au_mclk -pg 1 -lvl 5 -x 1420 -y 140 -defaultsOSRD
+preplace port au_bclk -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
+preplace port au_lrclk -pg 1 -lvl 0 -x 0 -y 660 -defaultsOSRD
+preplace port au_adc -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
+preplace port au_dac -pg 1 -lvl 5 -x 1420 -y 1150 -defaultsOSRD
+preplace port test_bclk -pg 1 -lvl 5 -x 1420 -y 1090 -defaultsOSRD
+preplace port test_lrclk -pg 1 -lvl 5 -x 1420 -y 1110 -defaultsOSRD
+preplace port test_adc -pg 1 -lvl 5 -x 1420 -y 1130 -defaultsOSRD
+preplace port test_dac -pg 1 -lvl 5 -x 1420 -y 1170 -defaultsOSRD
+preplace port led1 -pg 1 -lvl 5 -x 1420 -y 690 -defaultsOSRD
+preplace port btn1 -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
+preplace port btn2 -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace port btn3 -pg 1 -lvl 0 -x 0 -y 740 -defaultsOSRD
+preplace port btn4 -pg 1 -lvl 0 -x 0 -y 800 -defaultsOSRD
+preplace port led3 -pg 1 -lvl 5 -x 1420 -y 670 -defaultsOSRD
+preplace port led4 -pg 1 -lvl 5 -x 1420 -y 790 -defaultsOSRD
+preplace port led2 -pg 1 -lvl 5 -x 1420 -y 650 -defaultsOSRD
+preplace port sw -pg 1 -lvl 0 -x 0 -y 720 -defaultsOSRD
+preplace port led5_b -pg 1 -lvl 5 -x 1420 -y 730 -defaultsOSRD
+preplace port led5_r -pg 1 -lvl 5 -x 1420 -y 710 -defaultsOSRD
+preplace port led4_r -pg 1 -lvl 5 -x 1420 -y 750 -defaultsOSRD
+preplace port led4_b -pg 1 -lvl 5 -x 1420 -y 770 -defaultsOSRD
+preplace port sw1 -pg 1 -lvl 0 -x 0 -y 820 -defaultsOSRD
+preplace port led4_g -pg 1 -lvl 5 -x 1420 -y 810 -defaultsOSRD
+preplace port led5_g -pg 1 -lvl 5 -x 1420 -y 830 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 940 -y 120 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 3 -x 940 -y 400 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 560 -y 390 -defaultsOSRD
+preplace inst i2s_transmitter_0 -pg 1 -lvl 4 -x 1280 -y 930 -swap {0 1 2 3 4 8 9 7 5 6} -defaultsOSRD
+preplace inst InOutTranslation_0 -pg 1 -lvl 4 -x 1280 -y 1130 -swap {1 2 3 0 4 5 6 7 8} -defaultsOSRD
+preplace inst i2s_receiver_0 -pg 1 -lvl 2 -x 560 -y 640 -swap {0 1 2 3 4 7 8 9 5 6} -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 200 -y 350 -defaultsOSRD
+preplace inst AXI_Effects -pg 1 -lvl 3 -x 940 -y 730 -defaultsOSRD
+preplace netloc bclk_0_1 1 0 4 NJ 640 410 940 NJ 940 1150
+preplace netloc lrclk_0_1 1 0 4 NJ 660 390 950 NJ 950 1140
+preplace netloc sdata_0_1 1 0 4 NJ 680 370 1160 NJ 1160 NJ
+preplace netloc InOutTranslation_0_out1 1 4 1 NJ 1090
+preplace netloc InOutTranslation_0_out2 1 4 1 NJ 1110
+preplace netloc InOutTranslation_0_out3 1 4 1 NJ 1130
+preplace netloc i2s_transmitter_0_sdata 1 3 2 1160 1030 1400
+preplace netloc InOutTranslation_0_out4 1 4 1 NJ 1150
+preplace netloc InOutTranslation_0_out5 1 4 1 NJ 1170
+preplace netloc processing_system7_0_FCLK_CLK0 1 3 2 NJ 140 NJ
+preplace netloc AXI_Saturation_0_led_enable 1 3 2 NJ 690 NJ
+preplace netloc AXI_Rectification_0_led_enable 1 3 2 NJ 650 NJ
+preplace netloc switch_0_1 1 0 3 NJ 720 400J 740 710J
+preplace netloc AXI_Saturation_0_led_bot 1 3 2 NJ 710 NJ
+preplace netloc AXI_Saturation_0_led_bot_l 1 3 2 NJ 730 NJ
+preplace netloc AXI_Saturation_0_led_top_r 1 3 2 NJ 750 NJ
+preplace netloc AXI_Saturation_0_led_bot_r 1 3 2 NJ 770 NJ
+preplace netloc AXI_Echo_0_led_enable 1 3 2 NJ 670 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 20 250 NJ 250 NJ 250 1140
+preplace netloc ARESETN_1 1 1 1 370 350n
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 4 30 450 410 530 720 480 1160
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 3 370 540 730 930 NJ
+preplace netloc AXI_Effects_led4 1 3 2 NJ 790 NJ
+preplace netloc btn3_1 1 0 3 NJ 740 380J 750 740J
+preplace netloc btn2_1 1 0 3 NJ 760 NJ 760 NJ
+preplace netloc btn1_1 1 0 3 NJ 780 NJ 780 NJ
+preplace netloc btn4_1 1 0 3 NJ 800 NJ 800 NJ
+preplace netloc switch_0_2 1 0 3 NJ 820 NJ 820 NJ
+preplace netloc AXI_Effects_led_g1_0 1 3 2 NJ 810 NJ
+preplace netloc AXI_Effects_led_g2_0 1 3 2 NJ 830 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 380
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 410 240 NJ 240 1150
+preplace netloc processing_system7_0_FIXED_IO 1 3 2 NJ 80 NJ
+preplace netloc i2s_receiver_0_m_axis 1 2 1 N 640
+preplace netloc AXI_Echo_0_m_axis 1 3 1 1150 630n
+preplace netloc axi_iic_0_IIC 1 3 2 NJ 380 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 710 400n
+preplace netloc processing_system7_0_DDR 1 3 2 NJ 60 NJ
+levelinfo -pg 1 0 200 560 940 1280 1420
+pagesize -pg 1 -db -bbox -sgen -100 0 1540 1230
+",
+   "Color Coded_ScaleFactor":"0.408943",
+   "Color Coded_TopLeft":"-746,0",
+   "Default View_ScaleFactor":"0.456932",
+   "Default View_TopLeft":"-179,-74",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/processing_system7_0_FCLK_CLK1:false|/processing_system7_0_FCLK_RESET0_N:false|/rst_ps7_0_100M_peripheral_aresetn:false|/processing_system7_0_FCLK_CLK0:false|",
+   "Interfaces View_ScaleFactor":"1.0",
+   "Interfaces View_TopLeft":"-138,-54",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layers":"/processing_system7_0_FCLK_CLK1:true|/processing_system7_0_FCLK_RESET0_N:true|/rst_ps7_0_100M_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 9 -x 2990 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 9 -x 2990 -y 80 -defaultsOSRD
+preplace port iic_rtl -pg 1 -lvl 9 -x 2990 -y 220 -defaultsOSRD
+preplace port au_mclk -pg 1 -lvl 9 -x 2990 -y 120 -defaultsOSRD
+preplace port au_bclk -pg 1 -lvl 0 -x 0 -y 1020 -defaultsOSRD
+preplace port au_lrclk -pg 1 -lvl 0 -x 0 -y 1040 -defaultsOSRD
+preplace port au_adc -pg 1 -lvl 0 -x 0 -y 1060 -defaultsOSRD
+preplace port au_dac -pg 1 -lvl 9 -x 2990 -y 920 -defaultsOSRD
+preplace port test_bclk -pg 1 -lvl 9 -x 2990 -y 860 -defaultsOSRD
+preplace port test_lrclk -pg 1 -lvl 9 -x 2990 -y 880 -defaultsOSRD
+preplace port test_adc -pg 1 -lvl 9 -x 2990 -y 900 -defaultsOSRD
+preplace port test_dac -pg 1 -lvl 9 -x 2990 -y 940 -defaultsOSRD
+preplace port led1 -pg 1 -lvl 9 -x 2990 -y 480 -defaultsOSRD
+preplace port btn1 -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port btn2 -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port btn3 -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port btn4 -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace port led3 -pg 1 -lvl 9 -x 2990 -y 420 -defaultsOSRD
+preplace port led4 -pg 1 -lvl 9 -x 2990 -y 720 -defaultsOSRD
+preplace port led2 -pg 1 -lvl 9 -x 2990 -y 440 -defaultsOSRD
+preplace port sw -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
+preplace port led5_b -pg 1 -lvl 9 -x 2990 -y 1040 -defaultsOSRD
+preplace port led5_r -pg 1 -lvl 9 -x 2990 -y 1020 -defaultsOSRD
+preplace port led4_r -pg 1 -lvl 9 -x 2990 -y 1060 -defaultsOSRD
+preplace port led4_b -pg 1 -lvl 9 -x 2990 -y 460 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 8 -x 2780 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 68 67 69 66} -defaultsOSRD -pinDir DDR right -pinY DDR 0R -pinDir FIXED_IO right -pinY FIXED_IO 20R -pinDir USBIND_0 right -pinY USBIND_0 40R -pinDir M_AXI_GP0 left -pinY M_AXI_GP0 0L -pinDir M_AXI_GP0_ACLK left -pinY M_AXI_GP0_ACLK 40L -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 60R -pinDir FCLK_CLK1 left -pinY FCLK_CLK1 60L -pinDir FCLK_RESET0_N left -pinY FCLK_RESET0_N 20L
+preplace inst axi_iic_0 -pg 1 -lvl 8 -x 2780 -y 220 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 0L -pinDir IIC right -pinY IIC 0R -pinDir s_axi_aclk left -pinY s_axi_aclk 20L -pinDir s_axi_aresetn left -pinY s_axi_aresetn 100L -pinDir iic2intc_irpt right -pinY iic2intc_irpt 20R -pinBusDir gpo right -pinBusY gpo 40R
+preplace inst ps7_0_axi_periph -pg 1 -lvl 7 -x 2400 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 78 75 79 76 80 77 81} -defaultsOSRD -pinDir S00_AXI right -pinY S00_AXI 0R -pinDir M00_AXI right -pinY M00_AXI 20R -pinDir M01_AXI left -pinY M01_AXI 0L -pinDir ACLK left -pinY ACLK 20L -pinDir ARESETN left -pinY ARESETN 100L -pinDir S00_ACLK left -pinY S00_ACLK 40L -pinDir S00_ARESETN left -pinY S00_ARESETN 120L -pinDir M00_ACLK left -pinY M00_ACLK 60L -pinDir M00_ARESETN left -pinY M00_ARESETN 140L -pinDir M01_ACLK left -pinY M01_ACLK 80L -pinDir M01_ARESETN left -pinY M01_ARESETN 160L
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 460 -swap {1 0 2 3 4 5 6 7 8 9} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 0R -pinDir aux_reset_in left -pinY aux_reset_in 0L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 20L -pinDir dcm_locked left -pinY dcm_locked 40L -pinDir mb_reset right -pinY mb_reset 40R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 60R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 80R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 100R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 120R
+preplace inst i2s_transmitter_0 -pg 1 -lvl 7 -x 2400 -y 780 -swap {0 1 2 3 4 8 9 7 5 6} -defaultsOSRD -pinDir s_axis left -pinY s_axis 0L -pinDir bclk left -pinY bclk 60L -pinDir lrclk left -pinY lrclk 80L -pinDir sdata right -pinY sdata 80R -pinDir s_axis_aclk left -pinY s_axis_aclk 20L -pinDir s_axis_aresetn left -pinY s_axis_aresetn 40L
+preplace inst InOutTranslation_0 -pg 1 -lvl 8 -x 2780 -y 860 -swap {1 2 3 0 4 5 6 7 8} -defaultsOSRD -pinDir in1 left -pinY in1 60L -pinDir in2 left -pinY in2 80L -pinDir in3 left -pinY in3 100L -pinDir in4 left -pinY in4 0L -pinDir out1 right -pinY out1 0R -pinDir out2 right -pinY out2 20R -pinDir out3 right -pinY out3 40R -pinDir out4 right -pinY out4 60R -pinDir out5 right -pinY out5 80R
+preplace inst i2s_receiver_0 -pg 1 -lvl 4 -x 1190 -y 740 -swap {0 1 2 3 4 8 9 7 5 6} -defaultsOSRD -pinDir m_axis right -pinY m_axis 0R -pinDir bclk left -pinY bclk 300L -pinDir lrclk left -pinY lrclk 320L -pinDir sdata left -pinY sdata 280L -pinDir m_axis_aclk left -pinY m_axis_aclk 0L -pinDir m_axis_aresetn left -pinY m_axis_aresetn 20L
+preplace inst debounce_0 -pg 1 -lvl 2 -x 520 -y 340 -swap {4 5 0 1 2 3 6 7 8 9} -defaultsOSRD -pinDir clk left -pinY clk 140L -pinDir reset_n left -pinY reset_n 160L -pinDir button1 left -pinY button1 0L -pinDir button2 left -pinY button2 20L -pinDir button3 left -pinY button3 40L -pinDir button4 left -pinY button4 60L -pinDir result1 right -pinY result1 100R -pinDir result2 right -pinY result2 120R -pinDir result3 right -pinY result3 140R -pinDir result4 right -pinY result4 160R
+preplace inst system_ila_0 -pg 1 -lvl 7 -x 2400 -y 540 -swap {15 1 2 3 4 20 6 7 8 9 10 11 12 13 14 5 16 17 18 19 0 21 22 23 24 25 26} -defaultsOSRD -pinDir SLOT_0_AXIS left -pinY SLOT_0_AXIS 60L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 80L -pinDir SLOT_2_AXIS left -pinY SLOT_2_AXIS 40L -pinDir SLOT_3_AXIS left -pinY SLOT_3_AXIS 20L -pinDir SLOT_4_AXIS left -pinY SLOT_4_AXIS 0L -pinDir clk left -pinY clk 100L -pinDir resetn left -pinY resetn 120L
+preplace inst AXI_Gain_0 -pg 1 -lvl 5 -x 1590 -y 740 -defaultsOSRD -pinDir s_axis left -pinY s_axis 0L -pinDir m_axis right -pinY m_axis 0R -pinDir S_APB_GP0 left -pinY S_APB_GP0 20L -pinDir clk left -pinY clk 40L -pinDir rst left -pinY rst 60L
+preplace inst AXI_Rectification_0 -pg 1 -lvl 5 -x 1590 -y 480 -swap {5 1 2 3 4 0 6 7 8 9 13 14 12 11 10} -defaultsOSRD -pinDir s_axis right -pinY s_axis 40R -pinDir m_axis right -pinY m_axis 0R -pinDir clk left -pinY clk 40L -pinDir rst left -pinY rst 60L -pinDir led_enable right -pinY led_enable 60R -pinDir switch left -pinY switch 20L -pinDir enable left -pinY enable 0L
+preplace inst Activation_0 -pg 1 -lvl 4 -x 1190 -y 440 -swap {0 1 2 3 4 5 6 7 8 15 17 9 18 10 12 11 14 13 16} -defaultsOSRD -pinDir S_APB_GP0 left -pinY S_APB_GP0 0L -pinDir aclk left -pinY aclk 120L -pinDir aresetn left -pinY aresetn 140L -pinDir IN1 left -pinY IN1 20L -pinDir OUT1 right -pinY OUT1 140R -pinDir IN2 left -pinY IN2 40L -pinDir OUT2 right -pinY OUT2 40R -pinDir IN3 left -pinY IN3 60L -pinDir OUT3 right -pinY OUT3 100R -pinDir IN4 left -pinY IN4 80L -pinDir OUT4 right -pinY OUT4 120R
+preplace inst axi_apb_bridge_0 -pg 1 -lvl 3 -x 860 -y 130 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 44 18 19 20 21 22 23 24 25 17 27 28 29 30 31 32 33 34 26 36 37 38 39 40 41 42 43 35 45 46 47 48 49 50 51 52 53 54} -defaultsOSRD -pinDir AXI4_LITE right -pinY AXI4_LITE 0R -pinDir APB_M right -pinY APB_M 80R -pinDir APB_M2 right -pinY APB_M2 20R -pinDir APB_M3 right -pinY APB_M3 40R -pinDir APB_M4 right -pinY APB_M4 60R -pinDir s_axi_aclk left -pinY s_axi_aclk 0L -pinDir s_axi_aresetn left -pinY s_axi_aresetn 20L
+preplace inst AXI_Saturation_0 -pg 1 -lvl 6 -x 1970 -y 740 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 22 23 24 25 21 26} -defaultsOSRD -pinDir s_axis left -pinY s_axis 0L -pinDir m_axis right -pinY m_axis 0R -pinDir S_APB_GP0 left -pinY S_APB_GP0 20L -pinDir clk left -pinY clk 40L -pinDir rst left -pinY rst 60L -pinDir led_enable right -pinY led_enable 40R -pinDir led_top_l right -pinY led_top_l 280R -pinDir led_bot_l right -pinY led_bot_l 300R -pinDir led_top_r right -pinY led_top_r 320R -pinDir led_bot_r right -pinY led_bot_r 20R -pinDir enable left -pinY enable 100L
+preplace inst AXI_Echo_0 -pg 1 -lvl 6 -x 1970 -y 300 -swap {10 1 2 3 4 5 6 7 8 9 0 11 12 13 14 15 16 17 18 20 22 21 19} -defaultsOSRD -pinDir s_axis left -pinY s_axis 20L -pinDir m_axis right -pinY m_axis 40R -pinDir S_APB_GP0 left -pinY S_APB_GP0 0L -pinDir clk left -pinY clk 140L -pinDir rst left -pinY rst 160L -pinDir led_enable right -pinY led_enable 120R -pinDir enable left -pinY enable 120L
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 7 380 280 NJ 280 N 280 NJ 280 1730J 240 2250J 280 2570J
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 7 400 580 690 680 1050 680 1450 680 1810 660 2230 320 NJ
+preplace netloc bclk_0_1 1 0 8 NJ 1020 NJ 1020 710 1140 1010 1140 NJ 1140 NJ 1140 2170 920 NJ
+preplace netloc lrclk_0_1 1 0 8 NJ 1040 NJ 1040 630 1160 1050 1160 NJ 1160 NJ 1160 2230 940 NJ
+preplace netloc sdata_0_1 1 0 8 NJ 1060 NJ 1060 670 1120 990 1120 NJ 1120 NJ 1120 NJ 1120 2570J
+preplace netloc InOutTranslation_0_out1 1 8 1 NJ 860
+preplace netloc InOutTranslation_0_out2 1 8 1 NJ 880
+preplace netloc InOutTranslation_0_out3 1 8 1 NJ 900
+preplace netloc i2s_transmitter_0_sdata 1 7 1 N 860
+preplace netloc InOutTranslation_0_out4 1 8 1 NJ 920
+preplace netloc InOutTranslation_0_out5 1 8 1 NJ 940
+preplace netloc button1_0_1 1 0 2 NJ 340 NJ
+preplace netloc button2_0_1 1 0 2 NJ 360 NJ
+preplace netloc button3_0_1 1 0 2 NJ 380 NJ
+preplace netloc button4_0_1 1 0 2 NJ 400 NJ
+preplace netloc debounce_0_result1 1 2 2 730 460 N
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 7 380 560 670 660 1010 660 1430 660 1790 640 2210 300 2590
+preplace netloc processing_system7_0_FCLK_CLK0 1 8 1 NJ 120
+preplace netloc Activation_0_OUT1 1 4 2 1330 860 1770J
+preplace netloc AXI_Saturation_0_led_enable 1 6 3 2130J 480 NJ 480 NJ
+preplace netloc AXI_Rectification_0_led_enable 1 5 4 NJ 540 2150J 440 NJ 440 NJ
+preplace netloc switch_0_1 1 0 5 NJ 640 NJ 640 NJ 640 N 640 1350J
+preplace netloc AXI_Saturation_0_led_bot 1 6 3 NJ 1020 NJ 1020 NJ
+preplace netloc debounce_0_result2 1 2 2 710 480 N
+preplace netloc debounce_0_result3 1 2 2 650 500 N
+preplace netloc debounce_0_result4 1 2 2 630 520 N
+preplace netloc Activation_0_OUT2 1 4 1 N 480
+preplace netloc Activation_0_OUT4 1 4 5 1370J 640 1730J 680 2150J 720 NJ 720 NJ
+preplace netloc AXI_Saturation_0_led_bot_l 1 6 3 NJ 1040 NJ 1040 NJ
+preplace netloc AXI_Saturation_0_led_top_r 1 6 3 NJ 1060 NJ 1060 NJ
+preplace netloc AXI_Saturation_0_led_bot_r 1 6 3 2190J 460 NJ 460 NJ
+preplace netloc Activation_0_OUT3 1 4 2 1410 600 1730J
+preplace netloc AXI_Echo_0_led_enable 1 6 3 NJ 420 NJ 420 NJ
+preplace netloc AXI_Echo_0_m_axis 1 6 1 2170 340n
+preplace netloc AXI_Rectification_0_m_axis 1 5 2 1830 560 N
+preplace netloc processing_system7_0_DDR 1 8 1 NJ 60
+preplace netloc processing_system7_0_M_AXI_GP0 1 7 1 N 60
+preplace netloc ps7_0_axi_periph_M00_AXI 1 7 1 2550 80n
+preplace netloc processing_system7_0_FIXED_IO 1 8 1 NJ 80
+preplace netloc axi_iic_0_IIC 1 8 1 NJ 220
+preplace netloc AXI_Gain_0_m_axis 1 5 2 1830 620 NJ
+preplace netloc i2s_receiver_0_m_axis 1 4 3 1410 620 1770J 600 NJ
+preplace netloc AXI_Saturation_0_m_axis 1 5 2 NJ 520 2110
+preplace netloc axi_apb_bridge_0_APB_M 1 3 1 1010 210n
+preplace netloc axi_apb_bridge_0_APB_M4 1 3 2 1050J 170 1390
+preplace netloc axi_apb_bridge_0_APB_M3 1 3 3 1030J 150 NJ 150 1750
+preplace netloc axi_apb_bridge_0_APB_M2 1 3 3 1010J 130 NJ 130 1830
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 4 990J 0 NJ 0 NJ 0 2250J
+levelinfo -pg 1 0 200 520 860 1190 1590 1970 2400 2780 2990
+pagesize -pg 1 -db -bbox -sgen -110 -20 3110 1170
+",
+   "No Loops_ScaleFactor":"0.435043",
+   "No Loops_TopLeft":"-103,2",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 870 -y 670 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 870 -y 690 -defaultsOSRD
+preplace port iic_rtl -pg 1 -lvl 3 -x 870 -y 70 -defaultsOSRD
+preplace port DDC_0 -pg 1 -lvl 3 -x 870 -y 820 -defaultsOSRD
+preplace port au_adc -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
+preplace port au_bclk -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
+preplace port au_dac -pg 1 -lvl 3 -x 870 -y 150 -defaultsOSRD
+preplace port au_lrclk -pg 1 -lvl 0 -x -10 -y 200 -defaultsOSRD
+preplace port au_mclk -pg 1 -lvl 3 -x 870 -y 750 -defaultsOSRD
+preplace port btn1 -pg 1 -lvl 0 -x -10 -y 320 -defaultsOSRD
+preplace port btn2 -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port btn3 -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
+preplace port btn4 -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace port led1 -pg 1 -lvl 3 -x 870 -y 190 -defaultsOSRD
+preplace port led2 -pg 1 -lvl 3 -x 870 -y 210 -defaultsOSRD
+preplace port led3 -pg 1 -lvl 3 -x 870 -y 230 -defaultsOSRD
+preplace port led4 -pg 1 -lvl 3 -x 870 -y 250 -defaultsOSRD
+preplace port led4_b -pg 1 -lvl 3 -x 870 -y 270 -defaultsOSRD
+preplace port led4_r -pg 1 -lvl 3 -x 870 -y 290 -defaultsOSRD
+preplace port led5_b -pg 1 -lvl 3 -x 870 -y 310 -defaultsOSRD
+preplace port led5_r -pg 1 -lvl 3 -x 870 -y 330 -defaultsOSRD
+preplace port sw -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace port test_adc -pg 1 -lvl 3 -x 870 -y 130 -defaultsOSRD
+preplace port test_bclk -pg 1 -lvl 3 -x 870 -y 90 -defaultsOSRD
+preplace port test_dac -pg 1 -lvl 3 -x 870 -y 170 -defaultsOSRD
+preplace port test_lrclk -pg 1 -lvl 3 -x 870 -y 110 -defaultsOSRD
+preplace port hdmi_tx_clk_p -pg 1 -lvl 3 -x 870 -y 840 -defaultsOSRD
+preplace port hdmi_tx_clk_n -pg 1 -lvl 3 -x 870 -y 860 -defaultsOSRD
+preplace port hdmi_rx_clk_p -pg 1 -lvl 0 -x -10 -y 870 -defaultsOSRD
+preplace port hdmi_rx_clk_n -pg 1 -lvl 0 -x -10 -y 850 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y 930 -defaultsOSRD
+preplace port sw1 -pg 1 -lvl 0 -x -10 -y 950 -defaultsOSRD
+preplace portBus hdmi_tx_data_p -pg 1 -lvl 3 -x 870 -y 880 -defaultsOSRD
+preplace portBus hdmi_tx_data_n -pg 1 -lvl 3 -x 870 -y 900 -defaultsOSRD
+preplace portBus hdmi_rx_data_p -pg 1 -lvl 0 -x -10 -y 910 -defaultsOSRD
+preplace portBus hdmi_rx_data_n -pg 1 -lvl 0 -x -10 -y 890 -defaultsOSRD
+preplace portBus hdmi_rx_hpd -pg 1 -lvl 3 -x 870 -y 920 -defaultsOSRD
+preplace portBus hdmi_tx_hpdn -pg 1 -lvl 3 -x 870 -y 940 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 280 -y 730 -defaultsOSRD
+preplace inst clock_domain_audio -pg 1 -lvl 2 -x 680 -y 260 -defaultsOSRD
+preplace inst clock_domain_hdmi -pg 1 -lvl 2 -x 680 -y 880 -defaultsOSRD
+preplace inst crossing_clock_domain_audio_hdmi -pg 1 -lvl 1 -x 280 -y 430 -defaultsOSRD
+preplace netloc AXI_Saturation_0_led_bot 1 2 1 NJ 330
+preplace netloc AXI_Saturation_0_led_bot_l 1 2 1 NJ 310
+preplace netloc AXI_Saturation_0_led_bot_r 1 2 1 NJ 270
+preplace netloc AXI_Saturation_0_led_top_r 1 2 1 NJ 290
+preplace netloc Buffers_0_out1 1 2 1 NJ 90
+preplace netloc Buffers_0_out2 1 2 1 NJ 110
+preplace netloc Buffers_0_out3 1 2 1 NJ 130
+preplace netloc Buffers_0_out4 1 2 1 NJ 150
+preplace netloc Buffers_0_out5 1 2 1 NJ 170
+preplace netloc bclk_0_1 1 0 2 NJ 180 NJ
+preplace netloc lrclk_0_1 1 0 2 NJ 200 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 NJ 750 NJ
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 2 20 260 530
+preplace netloc sdata_0_1 1 0 2 NJ 220 NJ
+preplace netloc switch_0_1 1 0 2 NJ 240 520J
+preplace netloc AXI_Effects_m_axis1_tdata 1 0 3 80 560 NJ 560 850
+preplace netloc hdmi_out_0_clk_p 1 2 1 NJ 840
+preplace netloc hdmi_out_0_clk_n 1 2 1 NJ 860
+preplace netloc hdmi_out_0_data_n 1 2 1 NJ 900
+preplace netloc hdmi_out_0_data_p 1 2 1 NJ 880
+preplace netloc AXI_Effects_led1 1 2 1 NJ 190
+preplace netloc AXI_Effects_led2 1 2 1 NJ 210
+preplace netloc AXI_Effects_led3 1 2 1 NJ 230
+preplace netloc AXI_Effects_led4 1 2 1 NJ 250
+preplace netloc clock_domain_50_out1 1 0 3 80 10 NJ 10 810
+preplace netloc clock_domain_50_out4 1 0 3 40 580 NJ 580 830
+preplace netloc clock_domain_50_out2 1 0 3 50 550 NJ 550 810
+preplace netloc clock_domain_50_out3 1 0 3 30 570 NJ 570 840
+preplace netloc xpm_cdc_gen_0_dest_out 1 1 1 490 420n
+preplace netloc crossing_clock_domain_50_hdmi_dest_out1 1 1 1 480 440n
+preplace netloc clock_domain_50_src_send 1 0 3 60 590 NJ 590 820
+preplace netloc hdmi_rx_clk_n_1 1 0 2 NJ 850 NJ
+preplace netloc hdmi_rx_clk_p_1 1 0 2 NJ 870 NJ
+preplace netloc hdmi_rx_d_n_1 1 0 2 NJ 890 NJ
+preplace netloc hdmi_rx_d_p_1 1 0 2 NJ 910 NJ
+preplace netloc dest_clk_1 1 0 3 70 600 NJ 600 810
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 540 260n
+preplace netloc clk_in1_0_1 1 0 2 NJ 930 NJ
+preplace netloc clock_domain_hdmi_dout_0 1 2 1 830 920n
+preplace netloc btn2_1 1 0 2 10J 270 550J
+preplace netloc btn4_1 1 0 2 NJ 280 480J
+preplace netloc btn3_1 1 0 2 NJ 300 510J
+preplace netloc btn1_1 1 0 2 10J 290 520J
+preplace netloc sw1_1 1 0 2 NJ 950 NJ
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 670 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 500 160n
+preplace netloc axi_iic_0_IIC 1 2 1 NJ 70
+preplace netloc clock_domain_hdmi_DDC_1 1 2 1 NJ 820
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 690 NJ
+levelinfo -pg 1 -10 280 680 870
+pagesize -pg 1 -db -bbox -sgen -190 0 1050 1000
+"
+}
 
   # Restore current instance
   current_bd_instance $oldCurInst
